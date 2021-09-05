@@ -1,0 +1,96 @@
+// -----------------
+// V A R I A B L E S
+// -----------------
+$color__oscuro: #00090c;
+$color__claro: #FEFEFE;
+$color__claro--variable: #ececec;
+$color__primary: #360b00;
+$color__primary2: #881400;
+$color__secundary: #aa221d;
+$color__tertiary: #c98073;
+$color__variable: #d6b3ac;
+$color__tenue: rgba(255, 255, 255, 0.041);
+$color__gris--oscuro: #222222;
+$color__gris--claro: rgb(43, 43, 43);
+$font__primary: 'Ubuntu', sans-serif;
+$font__secundary: 'Squada One', cursive;
+
+// ------------------
+// E X T E N D 
+// ------------------
+%primary {
+	color: $color__secundary;
+  font-family: $font__secundary;
+}
+
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 2%;
+}
+
+%ex {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+// ------------------
+// M I X I N S
+// ------------------
+@mixin theme_background($color) {
+	body.dark & {
+		background-color: $color;
+	}
+}
+
+@mixin theme_color($color) {
+	body.dark & {
+		color: $color;
+	}
+}
+
+@mixin theme_image($image) {
+	body.dark & {
+		background-image: url($image);
+	}
+}
+
+@mixin theme_border($propiedad, $color) {
+	body.dark & {
+		border: $propiedad solid $color;
+	}
+}
+
+@mixin theme_border-bottom($propiedad, $color) {
+	body.dark & {
+		border-bottom: $propiedad solid $color;
+	}
+}
+
+@mixin icons-25px {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	margin-right: 3px;
+  @extend %ex;
+}
+
+@mixin icons-15px {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 3px;
+  @extend %ex;
+}
+
+@mixin icons-50px {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+  @extend %ex;
+}

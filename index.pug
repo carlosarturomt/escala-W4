@@ -1,0 +1,202 @@
+extend pug/components/template.pug
+block contenidos
+  main
+    section 
+      article 
+        hgroup 
+          h1 wisc-
+            span IV
+          h2 Escala Weschler de Inteligencia para Niños-IV
+        form(action="")
+          div 
+            label(for="name") Nombre del niño:
+            input.input-line(type="text" placeholder="Child's name" name="nombre" autocomplete="on" required)
+          div
+            label(for="name") Examinador:
+            input.input-line(type="text" placeholder="Examiner's name" name="nombre" autocomplete="on" required)
+
+      article 
+        hgroup 
+          h2 Estimación de la edad del niño
+        form(action="")
+          div 
+            label.label-table.border-top-left(for="name") 
+            label.input-table(for="name") Año
+            label.input-table(for="name") Mes
+            label.input-table.border-top-rigth(for="name") Día
+
+            label.label-table(for="name") Año de evaluación
+            input.input-table(type="number" placeholder="Ex: 2021" name="nombre" required)
+            input.input-table(type="number" placeholder="Ex: 09" name="nombre" required)
+            input.input-table(type="number" placeholder="Ex: 04" name="nombre" required)
+
+            label.label-table(for="name") Fecha de nacimiento
+            input.input-table(type="number" placeholder="Ex: 2010" name="nombre" required)
+            input.input-table(type="number" placeholder="Ex: 03" name="nombre" required)
+            input.input-table(type="number" placeholder="Ex: 23" name="nombre" required)
+
+            label.label-table.border-bottom-left(for="name") Edad a la evaluación
+            input.input-table.input-result(type="number" placeholder="Year" name="nombre" required)
+            input.input-table.input-result(type="number" placeholder="Month" name="nombre" required)
+            input.input-table.border-bottom-rigth.input-result(type="number" placeholder="Day" name="nombre" required)
+
+      article 
+        hgroup 
+          h2 Conversiones de puntuación natural total a puntuación escalar
+        form(action="")
+          .grid
+            label.grid-1a5.border-top-left(for="name") Subprueba
+            label.grid-5to6.font-07(for="name"): strong Punt. Nat.
+            label.grid-6to12.border-top-rigth(for="name") Puntuaciones escalares 
+          .grid
+            label.grid-1to5.font-09(for="name") Diseño con cubos
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Semejanzas
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Retención de dígitos
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Conceptos con dibujos
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Claves
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Vocabulario
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Sucesión de números y letras
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Matrices
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Comprensión
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09(for="name") Búsqueda de símbolos
+            input.grid-5to6(type="number" name="nombre" required) 
+            label.grid-6to7(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11(type="number" name="nombre" required)
+            label.grid-11to12(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09.background-var(for="name") (Figuras incompletas)
+            input.grid-5to6.background-var(type="number" name="nombre" required) 
+            label.grid-6to7.background-var(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9(type="number" name="nombre" required) (
+              span(style="color:transparent;") ###
+              |)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12.background-pri(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09.background-var(for="name") (Registros)
+            input.grid-5to6.background-var(type="number" name="nombre" required) 
+            label.grid-6to7.background-var(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11(type="number" name="nombre" required) (
+              span(style="color:transparent;") ###
+              |)
+            label.grid-11to12.background-pri(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09.background-var(for="name") (Información)
+            input.grid-5to6.background-var(type="number" name="nombre" required) 
+            label.grid-6to7.background-var(type="number" name="nombre" required)
+            label.grid-7to8(type="number" name="nombre" required) (
+              span(style="color:transparent;") ###
+              |)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12.background-pri(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09.background-var(for="name") (Aritmética)
+            input.grid-5to6.background-var(type="number" name="nombre" required) 
+            label.grid-6to7.background-var(type="number" name="nombre" required)
+            label.grid-7to8.background-pri(type="number" name="nombre" required)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10(type="number" name="nombre" required) (
+              span(style="color:transparent;") ###
+              |)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12.background-pri(type="number" name="nombre" required)
+          .grid
+            label.grid-1to5.font-09.border-bottom-left.background-var(for="name") Palabras en contexto (Pistas)
+            input.grid-5to6.background-var(type="number" name="nombre" required) 
+            label.grid-6to7.background-var(type="number" name="nombre" required)
+            label.grid-7to8(type="number" name="nombre" required) (
+              span(style="color:transparent;") ###
+              |)
+            label.grid-8to9.background-pri(type="number" name="nombre" required)
+            label.grid-9to10.background-pri(type="number" name="nombre" required)
+            label.grid-10to11.background-pri(type="number" name="nombre" required)
+            label.grid-11to12.background-pri(type="number" name="nombre" required)
+          .grid
+            label.grid-1to7.text-end(for="name"): strong Suma de puntuaciones escalares
+            label.grid-7to8.border-bottom-left.input-result(type="number" name="nombre" required)
+            label.grid-8to9.input-result(type="number" name="nombre" required)
+            label.grid-9to10.input-result(type="number" name="nombre" required)
+            label.grid-10to11.input-result(type="number" name="nombre" required)
+            label.grid-11to12.border-bottom-rigth.input-result(type="number" name="nombre" required)
