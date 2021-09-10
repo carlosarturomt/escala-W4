@@ -39,6 +39,10 @@ input:focus {
   outline: none;
 }
 
+hgroup {
+  margin-bottom: 1%;
+}
+
 h1 {
   font-size: 5.5rem;
   line-height: 4.2rem;
@@ -49,13 +53,22 @@ h1 span {
 }
 
 h2 {
+  padding: 3% 0;
+  font-size: 1.9rem;
   width: 80%;
   margin: 0 10%;
+}
+
+h3 {
+  text-align: center;
+  width: 90%;
+  margin: 0 5%;
   font-size: 0.9rem;
   color: #360b00;
 }
 
-p, label {
+p,
+label {
   font-size: 0.8rem;
   color: #360b00;
 }
@@ -69,11 +82,12 @@ p, label {
     font-size: 5.5rem;
   }
 
-  h2 {
+  h3 {
     font-size: 1.5rem;
   }
 
-  p, label {
+  p,
+label {
     font-size: 1rem;
   }
 }

@@ -37,26 +37,40 @@ input:focus {
   outline: none;
 }
 
+hgroup {
+  margin-bottom: 1%;
+}
+
 h1 {
   font-size: 5.5rem;
   line-height: 4.2rem;
   text-shadow: -5px 4px 2px $color__primary;
   @extend %primary;
+
   span {
     font-size: 4rem;
   }
 }
 
 h2 {
+  padding: 3% 0;
+  font-size: 1.9rem;
   width: 80%;
   margin: 0 10%;
-  font-size: 0.9rem;
-	color: $color__primary;
 }
 
-p, label {
+h3 {
+  text-align: center;
+  width: 90%;
+  margin: 0 5%;
+  font-size: 0.9rem;
+  color: $color__primary;
+}
+
+p,
+label {
   font-size: 0.8rem;
-	color: $color__primary;
+  color: $color__primary;
 }
 
 
@@ -65,16 +79,18 @@ p, label {
   h1 {
     font-size: 7rem;
     line-height: 6rem;
+
     span {
       font-size: 5.5rem;
     }
   }
-  
-  h2 {
+
+  h3 {
     font-size: 1.5rem;
   }
-  
-  p, label {
+
+  p,
+  label {
     font-size: 1rem;
   }
-  }
+}
