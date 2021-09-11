@@ -9,1126 +9,1099 @@ block contenidos
           h3 Escala Weschler de Inteligencia para Niños-IV
         form(action="")
           div 
-            label(for="name") Nombre del niño:
-            input.input-line(type="text" placeholder="Child's name" name="nombre" autocomplete="on" required)
+            label(for="nameChild") Nombre del niño:
+            input.input-line(type="text" placeholder="Child's name" name="nameChild" required)
           div
             label(for="name") Examinador:
-            input.input-line(type="text" placeholder="Examiner's name" name="nombre" autocomplete="on" required)
-
+            input.input-line(type="text" placeholder="Examiner's name" name="name" autocomplete="on" required)
       article 
-        hgroup 
-          h3 Estimación de la edad del niño
+        hgroup: h3 Estimación de la edad del niño
         form(action="")
           div 
-            label.label-table.border-top-left(for="name") 
-            label.input-table(for="name") Año
-            label.input-table(for="name") Mes
-            label.input-table.border-top-rigth(for="name") Día
+            label.label-table.border-top-left(for="")
+            label.input-table(for="") Año
+            label.input-table(for="") Mes
+            label.input-table.border-top-rigth(for="") Día
 
-            label.label-table(for="name") Año de evaluación
-            input.input-table(type="number" placeholder="Ex: 2021" name="nombre" required)
-            input.input-table(type="number" placeholder="Ex: 09" name="nombre" required)
-            input.input-table(type="number" placeholder="Ex: 04" name="nombre" required)
+            label.label-table(for="dateToday") Año de evaluación
+            input.input-table(type="number" placeholder="Ex: 2021" name="yearToday" required id="yearToday")
+            input.input-table(type="number" placeholder="Ex: 09" name="monthToday" required id="monthToday")
+            input.input-table(type="number" placeholder="Ex: 04" name="dayToday" required id="dayToday")
 
-            label.label-table(for="name") Fecha de nacimiento
-            input.input-table(type="number" placeholder="Ex: 2010" name="nombre" required)
-            input.input-table(type="number" placeholder="Ex: 03" name="nombre" required)
-            input.input-table(type="number" placeholder="Ex: 23" name="nombre" required)
+            label.label-table(for="dateBirthday") Fecha de nacimiento
+            input.input-table(type="number" placeholder="Ex: 2010" name="yearBirthday" required id="yearBirthday")
+            input.input-table(type="number" placeholder="Ex: 03" name="monthBirthday" required id="monthBirthday")
+            input.input-table(type="number" placeholder="Ex: 23" name="dayBirthday" required id="dayBirthday")
 
-            label.label-table.border-bottom-left(for="name") Edad a la evaluación
-            input.input-table.input-result(type="number" placeholder="Year" name="nombre" required)
-            input.input-table.input-result(type="number" placeholder="Month" name="nombre" required)
-            input.input-table.border-bottom-rigth.input-result(type="number" placeholder="Day" name="nombre" required)
+            label.label-table.border-bottom-left.button(for="dateAge" type="button" onclick="calculateYear()") Edad a la evaluación
+            label.input-table.input-result(for="" id="resultYear")
+            label.input-table.input-result(for="" id="resultMonth")
+            label.input-table.border-bottom-rigth.input-result(for="" id="resultDay")
 
       article 
         hgroup 
           h3 Conversiones de puntuación natural total a puntuación escalar
         form(action="")
           .grid
-            label.grid-border.grid-1a5.border-top-left(for="name") Subprueba
-            label.grid-border.grid-5to6.font-07(for="name"): strong Punt. Nat.
-            label.grid-border.grid-6to12.border-top-rigth(for="name") Puntuaciones escalares 
+            label.grid-border.grid-1a5.border-top-left(for="") Subprueba
+            label.grid-border.grid-5to6.font-07(for=""): strong Punt. Nat.
+            label.grid-border.grid-6to12.border-top-rigth(for="") Puntuaciones escalares 
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Diseño con cubos
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="DC") Diseño con cubos
+            input.grid-border.grid-5to6(type="number" name="inputDC" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Semejanzas
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="SE") Semejanzas
+            input.grid-border.grid-5to6(type="number" name="inputSE" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Retención de dígitos
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="RD") Retención de dígitos
+            input.grid-border.grid-5to6(type="number" name="inputRD" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Conceptos con dibujos
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="CD") Conceptos con dibujos
+            input.grid-border.grid-5to6(type="number" name="inputCD" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Claves
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="CL") Claves
+            input.grid-border.grid-5to6(type="number" name="inputCL" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Vocabulario
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="VB") Vocabulario
+            input.grid-border.grid-5to6(type="number" name="inputVB" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Sucesión de números y letras
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="NL") Sucesión de números y letras
+            input.grid-border.grid-5to6(type="number" name="inputNL" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Matrices
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="MT") Matrices
+            input.grid-border.grid-5to6(type="number" name="inputMT" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Comprensión
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="CM") Comprensión
+            input.grid-border.grid-5to6(type="number" name="inputCM" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09(for="name") Búsqueda de símbolos
-            input.grid-border.grid-5to6(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11(type="number" name="nombre" required)
-            label.grid-border.grid-11to12(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="BS") Búsqueda de símbolos
+            input.grid-border.grid-5to6(type="number" name="inputBS" required) 
+            label.grid-border.grid-6to7(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11(for="")
+            label.grid-border.grid-11to12(for="")
           .grid
-            label.grid-border.grid-1to5.font-09.background-var(for="name") (Figuras incompletas)
-            input.grid-border.grid-5to6.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7.background-var(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9(type="number" name="nombre" required) (
+            label.grid-border.grid-1to5.font-09.background-var(for="FI") (Figuras incompletas)
+            input.grid-border.grid-5to6.background-var(type="number" name="inputFI" required) 
+            label.grid-border.grid-6to7.background-var(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9(for="") (
               span(style="color:transparent;") # #
               |)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12.background-pri(type="number" name="nombre" required)
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-border.grid-1to5.font-09.background-var(for="name") (Registros)
-            input.grid-border.grid-5to6.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7.background-var(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11(type="number" name="nombre" required) (
+            label.grid-border.grid-1to5.font-09.background-var(for="RG") (Registros)
+            input.grid-border.grid-5to6.background-var(type="number" name="inputRG" required) 
+            label.grid-border.grid-6to7.background-var(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11(for="") (
               span(style="color:transparent;") # #
               |)
-            label.grid-border.grid-11to12.background-pri(type="number" name="nombre" required)
+            label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-border.grid-1to5.font-09.background-var(for="name") (Información)
-            input.grid-border.grid-5to6.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7.background-var(type="number" name="nombre" required)
-            label.grid-border.grid-7to8(type="number" name="nombre" required) (
+            label.grid-border.grid-1to5.font-09.background-var(for="IN") (Información)
+            input.grid-border.grid-5to6.background-var(type="number" name="inputIN" required) 
+            label.grid-border.grid-6to7.background-var(for="")
+            label.grid-border.grid-7to8(for="") (
               span(style="color:transparent;") # #
               |)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12.background-pri(type="number" name="nombre" required)
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-border.grid-1to5.font-09.background-var(for="name") (Aritmética)
-            input.grid-border.grid-5to6.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7.background-var(type="number" name="nombre" required)
-            label.grid-border.grid-7to8.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10(type="number" name="nombre" required) (
+            label.grid-border.grid-1to5.font-09.background-var(for="AR") (Aritmética)
+            input.grid-border.grid-5to6.background-var(type="number" name="inputAR" required) 
+            label.grid-border.grid-6to7.background-var(for="")
+            label.grid-border.grid-7to8.background-pri(for="")
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10(for="") (
               span(style="color:transparent;") # #
               |)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12.background-pri(type="number" name="nombre" required)
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-border.grid-1to5.font-09.border-bottom-left.background-var(for="name") Palabras en contexto (Pistas)
-            input.grid-border.grid-5to6.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-6to7.background-var(type="number" name="nombre" required)
-            label.grid-border.grid-7to8(type="number" name="nombre" required) (
+            label.grid-border.grid-1to5.font-09.border-bottom-left.background-var(for="PC") Palabras en contexto (Pistas)
+            input.grid-border.grid-5to6.background-var(type="number" name="inputPC" required) 
+            label.grid-border.grid-6to7.background-var(for="")
+            label.grid-border.grid-7to8(for="") (
               span(style="color:transparent;") # #
               |)
-            label.grid-border.grid-8to9.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.background-pri(type="number" name="nombre" required)
-            label.grid-border.grid-11to12.background-pri(type="number" name="nombre" required)
+            label.grid-border.grid-8to9.background-pri(for="")
+            label.grid-border.grid-9to10.background-pri(for="")
+            label.grid-border.grid-10to11.background-pri(for="")
+            label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-1to7.text-end(for="name"): strong Suma de puntuaciones escalares
-            label.grid-border.grid-7to8.border-bottom-left.input-result(type="number" name="nombre" required)
-            label.grid-border.grid-8to9.input-result(type="number" name="nombre" required)
-            label.grid-border.grid-9to10.input-result(type="number" name="nombre" required)
-            label.grid-border.grid-10to11.input-result(type="number" name="nombre" required)
-            label.grid-border.grid-11to12.border-bottom-rigth.input-result(type="number" name="nombre" required)
+            label.grid-1to7.text-end(for="sumaPuntEsc"): strong Suma de puntuaciones escalares
+            label.grid-border.grid-7to8.border-bottom-left.input-result(for="")
+            label.grid-border.grid-8to9.input-result(for="")
+            label.grid-border.grid-9to10.input-result(for="")
+            label.grid-border.grid-10to11.input-result(for="")
+            label.grid-border.grid-11to12.border-bottom-rigth.input-result(for="")
           .grid
-            label.grid-1to7.text-end(for="name")
-            label.grid-7to8.border-bottom-left.font-090(type="number" name="nombre" required) ICV
-            label.grid-8to9.font-090(type="number" name="nombre" required) IRP
-            label.grid-9to10.font-090(type="number" name="nombre" required) IMT
-            label.grid-10to11.font-090(type="number" name="nombre" required) IVP
-            label.grid-11to12.border-bottom-rigth.font-090(type="number" name="nombre" required) CIT
-
+            label.grid-1to7.text-end(for="")
+            label.grid-7to8.border-bottom-left.font-090(for="") ICV
+            label.grid-8to9.font-090(for="") IRP
+            label.grid-9to10.font-090(for="") IMT
+            label.grid-10to11.font-090(for="") IVP
+            label.grid-11to12.border-bottom-rigth.font-090(for="") CIT
       article 
         form(action="")
           div 
-            label.label-table.border-top-left(for="name") 
-            label.input-table.font-075.background-pri.text-white(for="name") Total de las 10 subpruebas
-            label.input-table.font-075.background-pri.text-white(for="name") 3 de Comprensión verbal
-            label.input-table.border-top-rigth.font-075.background-pri.text-white(for="name") 3 de Razonamiento perceptual
+            label.label-table.border-top-left(for="") 
+            label.input-table.font-075.background-pri.text-white(for="") Total de las 10 subpruebas
+            label.input-table.font-075.background-pri.text-white(for="") 3 de Comprensión verbal
+            label.input-table.border-top-rigth.font-075.background-pri.text-white(for="") 3 de Razonamiento perceptual
 
-            label.label-table.font-085(for="name") Suma de puntuaciones escalares
-            label.input-table(type="number" placeholder="Ex: 2021" name="nombre" required)
-            label.input-table(type="number" placeholder="Ex: 09" name="nombre" required)
-            label.input-table(type="number" placeholder="Ex: 04" name="nombre" required)
+            label.label-table.font-085(for="") Suma de puntuaciones escalares
+            label.input-table(for="")
+            label.input-table(for="")
+            label.input-table(for="")
 
-            label.label-table.font-085(for="name") Número de subpruebas
-            label.input-table(type="number" placeholder="Ex: 2010" name="nombre" required) ÷10
-            label.input-table(type="number" placeholder="Ex: 03" name="nombre" required) +3
-            label.input-table(type="number" placeholder="Ex: 23" name="nombre" required) ÷3
+            label.label-table.font-085(for="") Número de subpruebas
+            label.input-table(for="") ÷10
+            label.input-table(for="") +3
+            label.input-table(for="") ÷3
 
-            label.label-table.border-bottom-left.font-085(for="name") Puntuación media
-            label.input-table(type="number" placeholder="Year" name="nombre" required)
-            label.input-table(type="number" placeholder="Month" name="nombre" required)
-            label.input-table.border-bottom-rigth(type="number" placeholder="Day" name="nombre" required)
-
+            label.label-table.border-bottom-left.font-085(for="") Puntuación media
+            label.input-table(for="")
+            label.input-table(for="")
+            label.input-table.border-bottom-rigth(for="")
       article 
         hgroup 
           h3 Cálculo de puntuaciones índice
         form(action="")
           .grid13
-            label.grid-border.grid-1a5.border-top-left.font-090(for="name") Escala
-            label.grid-border.grid-5to7.font-07(type="number" name="nombre" required) Suma de puntuaciones escalares
-            label.grid-border.grid-7to9.font-07(type="number" name="nombre" required) Índice compuesto
-            label.grid-border.grid-9to11.font-07(type="number" name="nombre" required) Rango percentil
-            label.grid-border.grid13-11to13.border-top-rigth.font-07(type="number" name="nombre" required) Intervalo de confianza de 95%
+            label.grid-border.grid-1a5.border-top-left.font-090(for="") Escala
+            label.grid-border.grid-5to7.font-07(for="") Suma de puntuaciones escalares
+            label.grid-border.grid-7to9.font-07(for="") Índice compuesto
+            label.grid-border.grid-9to11.font-07(for="") Rango percentil
+            label.grid-border.grid13-11to13.border-top-rigth.font-07(for="") Intervalo de confianza de 95%
           .grid13
-            label.grid-border.grid-1to5.font-09(for="name") Comprensión verbal
-            input.grid-border.grid-5to7.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-7to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to11(type="number" name="nombre" required)
-            label.grid-border.grid13-11to13(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="calculoCV") Comprensión verbal
+            label.grid-border.grid-5to7.background-var(for="") 
+            label.grid-border.grid-7to9(for="")
+            label.grid-border.grid-9to11(for="")
+            label.grid-border.grid13-11to13(for="")
           .grid13
-            label.grid-border.grid-1to5.font-09(for="name") Razonamiento perceptual
-            input.grid-border.grid-5to7.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-7to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to11(type="number" name="nombre" required)
-            label.grid-border.grid13-11to13(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="calculoRP") Razonamiento perceptual
+            label.grid-border.grid-5to7.background-var(for="") 
+            label.grid-border.grid-7to9(for="")
+            label.grid-border.grid-9to11(for="")
+            label.grid-border.grid13-11to13(for="")
           .grid13
-            label.grid-border.grid-1to5.font-09(for="name") Memoria de trabajo
-            input.grid-border.grid-5to7.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-7to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to11(type="number" name="nombre" required)
-            label.grid-border.grid13-11to13(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="calculoMT") Memoria de trabajo
+            label.grid-border.grid-5to7.background-var(for="") 
+            label.grid-border.grid-7to9(for="")
+            label.grid-border.grid-9to11(for="")
+            label.grid-border.grid13-11to13(for="")
           .grid13
-            label.grid-border.grid-1to5.font-09(for="name") Velocidad de procesamiento
-            input.grid-border.grid-5to7.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-7to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to11(type="number" name="nombre" required)
-            label.grid-border.grid13-11to13(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09(for="calculoVP") Velocidad de procesamiento
+            label.grid-border.grid-5to7.background-var(for="") 
+            label.grid-border.grid-7to9(for="")
+            label.grid-border.grid-9to11(for="")
+            label.grid-border.grid13-11to13(for="")
           .grid13
-            label.grid-border.grid-1to5.font-09.border-bottom-left(for="name") Escala Total
-            input.grid-border.grid-5to7.background-var(type="number" name="nombre" required) 
-            label.grid-border.grid-7to9(type="number" name="nombre" required)
-            label.grid-border.grid-9to11(type="number" name="nombre" required)
-            label.grid-border.grid13-11to13.border-bottom-rigth(type="number" name="nombre" required)
+            label.grid-border.grid-1to5.font-09.border-bottom-left(for="calculoET") Escala Total
+            label.grid-border.grid-5to7.background-var(for="") 
+            label.grid-border.grid-7to9(for="")
+            label.grid-border.grid-9to11(for="")
+            label.grid-border.grid13-11to13.border-bottom-rigth(for="")
 
     section 
       article 
-        hgroup.background-pri
-          h2.text-white.text-h1 Protocolo de registro
+        hgroup.background-pri: h2.text-white.text-h1 Protocolo de registro
         h3 Perfil de puntuaciones escalares de subprueba
-
         form(action="")
           .grid16
-            label.grid-border-noBottom.grid16-1to6.border-top-left.font-07(for="name") Comprensión verval
-            label.grid-border-noBottom.grid16-6to10.font-07(type="number" name="nombre" required) Razonamiento perceptual
-            label.grid-border-noBottom.grid16-10to13.font-07(type="number" name="nombre" required) Memoria de trabajo
-            label.grid-border-noBottom.grid16-13to16.font-07.border-top-rigth(type="number" name="nombre" required) Velocidad de procesamiento
+            label.grid-border-noBottom.grid16-1to6.border-top-left.font-07(for="") Comprensión verval
+            label.grid-border-noBottom.grid16-6to10.font-07(for="") Razonamiento perceptual
+            label.grid-border-noBottom.grid16-10to13.font-07(for="") Memoria de trabajo
+            label.grid-border-noBottom.grid16-13to16.font-07.border-top-rigth(for="") Velocidad de procesamiento
           .grid16
-            label.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
+            label.font-07(for=""): span(style="color:transparent;") # # 
             label.grid-border-left.font-07(for="name") SE
-            label.font-07(type="number" name="nombre" required) VB
-            label.font-07(type="number" name="nombre" required) CM
-            label.font-07(type="number" name="nombre" required) (IN)
-            label.grid-border-right.font-07(type="number" name="nombre" required) (PC)
-            label.grid-border-left.font-07(type="number" name="nombre" required) DC
-            label.font-07(type="number" name="nombre" required) CD
-            label.font-07(type="number" name="nombre" required) MT
-            label.grid-border-right.font-07(type="number" name="nombre" required) (FI)
-            label.grid-border-left.font-07(type="number" name="nombre" required) RD
-            label.font-07(type="number" name="nombre" required) NL
-            label.grid-border-right.font-07(type="number" name="nombre" required) (AR)
-            label.grid-border-left.font-07(type="number" name="nombre" required) CL
-            label.font-07(type="number" name="nombre" required) BS
-            label.grid-border-right.font-07(type="number" name="nombre" required) (RG)
+            label.font-07(for="") VB
+            label.font-07(for="") CM
+            label.font-07(for="") (IN)
+            label.grid-border-right.font-07(for="") (PC)
+            label.grid-border-left.font-07(for="") DC
+            label.font-07(for="") CD
+            label.font-07(for="") MT
+            label.grid-border-right.font-07(for="") (FI)
+            label.grid-border-left.font-07(for="") RD
+            label.font-07(for="") NL
+            label.grid-border-right.font-07(for="") (AR)
+            label.grid-border-left.font-07(for="") CL
+            label.font-07(for="") BS
+            label.grid-border-right.font-07(for="") (RG)
           .grid16
-            label.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required) 
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required) 
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required) 
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-            label.grid-border.font-07(type="number" name="nombre" required)
-              span(style="color:transparent;") # # 
-
+            label.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
+            label.grid-border.font-07(for=""): span(style="color:transparent;") # # 
           .grid16
-            label.font-07(type="number" name="nombre" required) 19
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 19
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 18
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 18
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 17
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 17
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 16
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 16
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 15
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 15
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 14
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 14
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 13
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 13
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 12
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 12
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 11
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 11
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 10
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 10
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 9
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 9
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 8
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 8
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 7
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 7
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 6
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 6
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 5
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 5
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 4
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 4
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 3
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 3
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 2
-            label.grid-border-left.font-07(type="number" name="nombre" required) • 
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) • 
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.font-07(type="number" name="nombre" required) •
-            label.grid-border-right.font-07(type="number" name="nombre" required) •
+            label.font-07(for="") 2
+            label.grid-border-left.font-07(for="") • 
+            label.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.font-07(for="") • 
+            label.grid-border-right.font-07(for="") •
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") • 
+            label.grid-border-left.font-07(for="") •
+            label.font-07(for="") •
+            label.grid-border-right.font-07(for="") •
           .grid16
-            label.font-07(type="number" name="nombre" required) 1
-            label.border-bottom-left.grid-border-left.grid-border-bottom.font-07(type="number" name="nombre" required) • 
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) • 
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) • 
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) • 
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) •
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) •
-            label.border-bottom-rigth.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) •
-
+            label.font-07(for="") 1
+            label.border-bottom-left.grid-border-left.grid-border-bottom.font-07(for="") • 
+            label.grid-border-bottom.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") • 
+            label.grid-border-bottom.grid-border-right.font-07(for="") •
+            label.grid-border-bottom.grid-border-left.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") • 
+            label.grid-border-bottom.grid-border-right.font-07(for="") •
+            label.grid-border-bottom.grid-border-left.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") •
+            label.grid-border-bottom.grid-border-right.font-07(for="") • 
+            label.grid-border-bottom.grid-border-left.font-07(for="") •
+            label.grid-border-bottom.font-07(for="") •
+            label.border-bottom-rigth.grid-border-bottom.grid-border-right.font-07(for="") •
       article 
-        hgroup
-          h3 Perfil de puntuaciones compuestas
-
+        hgroup: h3 Perfil de puntuaciones compuestas
         form(action="")
           .grid16
             label.grid-border-noBottom.grid16-2to5.border-top-left.font-07(for="name") ICV
-            label.grid-border-noBottom.grid16-5to8.font-07(type="number" name="nombre" required) IRP
-            label.grid-border-noBottom.grid16-8to11.font-07(type="number" name="nombre" required) IMT
-            label.grid-border-noBottom.grid16-11to14.font-07(type="number" name="nombre" required) IVP
-            label.grid-border-noBottom.grid16-14to17.font-07.border-top-rigth(type="number" name="nombre" required) CIT
+            label.grid-border-noBottom.grid16-5to8.font-07(for="") IRP
+            label.grid-border-noBottom.grid16-8to11.font-07(for="") IMT
+            label.grid-border-noBottom.grid16-11to14.font-07(for="") IVP
+            label.grid-border-noBottom.grid16-14to17.font-07.border-top-rigth(for="") CIT
           .grid16
             label.grid-border-noBottom.grid16-2to5.font-07(for="name") 
               span(style="color:transparent;") # # 
-            label.grid-border-noBottom.grid16-5to8.font-07(type="number" name="nombre" required) 
+            label.grid-border-noBottom.grid16-5to8.font-07(for="") 
               span(style="color:transparent;") # # 
-            label.grid-border-noBottom.grid16-8to11.font-07(type="number" name="nombre" required)
+            label.grid-border-noBottom.grid16-8to11.font-07(for="")
               span(style="color:transparent;") # # 
-            label.grid-border-noBottom.grid16-11to14.font-07(type="number" name="nombre" required)
+            label.grid-border-noBottom.grid16-11to14.font-07(for="")
               span(style="color:transparent;") # # 
-            label.grid-border-noBottom.grid16-14to17.font-07(type="number" name="nombre" required)
+            label.grid-border-noBottom.grid16-14to17.font-07(for="")
               span(style="color:transparent;") # # 
 
           .grid16
-            label.font-07(type="number" name="nombre" required) 160 -
-            label.grid-border-top.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.grid-border-top.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.font-07(type="number" name="nombre" required) - 
-            label.grid-border-top.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-top.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.font-07(type="number" name="nombre" required) -
-            label.grid-border-top.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 160 -
+            label.grid-border-top.grid-border-left.font-07(for="") - 
+            label.grid-border-top.font-07(for="") -
+            label.grid-border-top.grid-border-right.font-07(for="") -
+            label.grid-border-top.grid-border-left.font-07(for="") -
+            label.grid-border-top.font-07(for="") -
+            label.grid-border-top.grid-border-right.font-07(for="") -
+            label.grid-border-top.grid-border-left.font-07(for="") -
+            label.grid-border-top.font-07(for="") - 
+            label.grid-border-top.grid-border-right.font-07(for="") -
+            label.grid-border-top.grid-border-left.font-07(for="") -
+            label.grid-border-top.font-07(for="") -
+            label.grid-border-top.grid-border-right.font-07(for="") - 
+            label.grid-border-top.grid-border-left.font-07(for="") -
+            label.grid-border-top.font-07(for="") -
+            label.grid-border-top.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 150 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 150 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 140 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 140 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 130 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 130 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 120 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 120 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 110 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 110 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 100 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) — 
-            label.font-07(type="number" name="nombre" required) —
-            label.grid-border-right.font-07(type="number" name="nombre" required) —
-            label.grid-border-left.font-07(type="number" name="nombre" required) —
-            label.font-07(type="number" name="nombre" required) —
-            label.grid-border-right.font-07(type="number" name="nombre" required) —
-            label.grid-border-left.font-07(type="number" name="nombre" required) —
-            label.font-07(type="number" name="nombre" required) — 
-            label.grid-border-right.font-07(type="number" name="nombre" required) —
-            label.grid-border-left.font-07(type="number" name="nombre" required) —
-            label.font-07(type="number" name="nombre" required) —
-            label.grid-border-right.font-07(type="number" name="nombre" required) — 
-            label.grid-border-left.font-07(type="number" name="nombre" required) —
-            label.font-07(type="number" name="nombre" required) —
-            label.grid-border-right.font-07(type="number" name="nombre" required) —
+            label.font-07(for="") 100 -
+            label.grid-border-left.font-07(for="") — 
+            label.font-07(for="") —
+            label.grid-border-right.font-07(for="") —
+            label.grid-border-left.font-07(for="") —
+            label.font-07(for="") —
+            label.grid-border-right.font-07(for="") —
+            label.grid-border-left.font-07(for="") —
+            label.font-07(for="") — 
+            label.grid-border-right.font-07(for="") —
+            label.grid-border-left.font-07(for="") —
+            label.font-07(for="") —
+            label.grid-border-right.font-07(for="") — 
+            label.grid-border-left.font-07(for="") —
+            label.font-07(for="") —
+            label.grid-border-right.font-07(for="") —
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 90 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 90 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 80 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 80 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 70 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 70 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 60 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 60 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 50 -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 50 -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 
+            label.font-07(for="") 
               span(style="color:transparent;") # # 
               | -
-            label.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) - 
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.font-07(type="number" name="nombre" required) -
-            label.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.grid-border-left.font-07(for="") - 
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") - 
+            label.grid-border-right.font-07(for="") -
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") - 
+            label.grid-border-left.font-07(for="") -
+            label.font-07(for="") -
+            label.grid-border-right.font-07(for="") -
           .grid16
-            label.font-07(type="number" name="nombre" required) 40 -
-            label.grid-border-bottom.border-bottom-left.grid-border-left.font-07(type="number" name="nombre" required) - 
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) - 
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.grid-border-right.font-07(type="number" name="nombre" required) - 
-            label.grid-border-bottom.grid-border-left.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.font-07(type="number" name="nombre" required) -
-            label.grid-border-bottom.border-bottom-rigth.grid-border-right.font-07(type="number" name="nombre" required) -
+            label.font-07(for="") 40 -
+            label.grid-border-bottom.border-bottom-left.grid-border-left.font-07(for="") - 
+            label.grid-border-bottom.font-07(for="") -
+            label.grid-border-bottom.grid-border-right.font-07(for="") -
+            label.grid-border-bottom.grid-border-left.font-07(for="") -
+            label.grid-border-bottom.font-07(for="") -
+            label.grid-border-bottom.grid-border-right.font-07(for="") -
+            label.grid-border-bottom.grid-border-left.font-07(for="") -
+            label.grid-border-bottom.font-07(for="") - 
+            label.grid-border-bottom.grid-border-right.font-07(for="") -
+            label.grid-border-bottom.grid-border-left.font-07(for="") -
+            label.grid-border-bottom.font-07(for="") -
+            label.grid-border-bottom.grid-border-right.font-07(for="") - 
+            label.grid-border-bottom.grid-border-left.font-07(for="") -
+            label.grid-border-bottom.font-07(for="") -
+            label.grid-border-bottom.border-bottom-rigth.grid-border-right.font-07(for="") -

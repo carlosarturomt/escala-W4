@@ -39,37 +39,37 @@
             </hgroup>
             <form action="">
               <div> 
-                <label for="name">Nombre del niño:</label>
-                <input class="input-line" type="text" placeholder="Child's name" name="nombre" autocomplete="on" required="required"/>
+                <label for="nameChild">Nombre del niño:</label>
+                <input class="input-line" type="text" placeholder="Child's name" name="nameChild" required="required"/>
               </div>
               <div>
                 <label for="name">Examinador:</label>
-                <input class="input-line" type="text" placeholder="Examiner's name" name="nombre" autocomplete="on" required="required"/>
+                <input class="input-line" type="text" placeholder="Examiner's name" name="name" autocomplete="on" required="required"/>
               </div>
             </form>
           </article>
           <article> 
-            <hgroup> 
+            <hgroup>
               <h3>Estimación de la edad del niño</h3>
             </hgroup>
             <form action="">
               <div> 
-                <label class="label-table border-top-left" for="name"> </label>
-                <label class="input-table" for="name">Año</label>
-                <label class="input-table" for="name">Mes</label>
-                <label class="input-table border-top-rigth" for="name">Día</label>
-                <label class="label-table" for="name">Año de evaluación</label>
-                <input class="input-table" type="number" placeholder="Ex: 2021" name="nombre" required="required"/>
-                <input class="input-table" type="number" placeholder="Ex: 09" name="nombre" required="required"/>
-                <input class="input-table" type="number" placeholder="Ex: 04" name="nombre" required="required"/>
-                <label class="label-table" for="name">Fecha de nacimiento</label>
-                <input class="input-table" type="number" placeholder="Ex: 2010" name="nombre" required="required"/>
-                <input class="input-table" type="number" placeholder="Ex: 03" name="nombre" required="required"/>
-                <input class="input-table" type="number" placeholder="Ex: 23" name="nombre" required="required"/>
-                <label class="label-table border-bottom-left" for="name">Edad a la evaluación</label>
-                <input class="input-table input-result" type="number" placeholder="Year" name="nombre" required="required"/>
-                <input class="input-table input-result" type="number" placeholder="Month" name="nombre" required="required"/>
-                <input class="input-table border-bottom-rigth input-result" type="number" placeholder="Day" name="nombre" required="required"/>
+                <label class="label-table border-top-left" for=""></label>
+                <label class="input-table" for="">Año</label>
+                <label class="input-table" for="">Mes</label>
+                <label class="input-table border-top-rigth" for="">Día</label>
+                <label class="label-table" for="dateToday">Año de evaluación</label>
+                <input class="input-table" type="number" placeholder="Ex: 2021" name="yearToday" required="required" id="yearToday"/>
+                <input class="input-table" type="number" placeholder="Ex: 09" name="monthToday" required="required" id="monthToday"/>
+                <input class="input-table" type="number" placeholder="Ex: 04" name="dayToday" required="required" id="dayToday"/>
+                <label class="label-table" for="dateBirthday">Fecha de nacimiento</label>
+                <input class="input-table" type="number" placeholder="Ex: 2010" name="yearBirthday" required="required" id="yearBirthday"/>
+                <input class="input-table" type="number" placeholder="Ex: 03" name="monthBirthday" required="required" id="monthBirthday"/>
+                <input class="input-table" type="number" placeholder="Ex: 23" name="dayBirthday" required="required" id="dayBirthday"/>
+                <label class="label-table border-bottom-left button" for="dateAge" type="button" onclick="calculateYear()">Edad a la evaluación</label>
+                <label class="input-table input-result" for="" id="resultYear"></label>
+                <label class="input-table input-result" for="" id="resultMonth"></label>
+                <label class="input-table border-bottom-rigth input-result" for="" id="resultDay"></label>
               </div>
             </form>
           </article>
@@ -79,197 +79,197 @@
             </hgroup>
             <form action="">
               <div class="grid">
-                <label class="grid-border grid-1a5 border-top-left" for="name">Subprueba</label>
-                <label class="grid-border grid-5to6 font-07" for="name"><strong>Punt. Nat.</strong></label>
-                <label class="grid-border grid-6to12 border-top-rigth" for="name">Puntuaciones escalares </label>
+                <label class="grid-border grid-1a5 border-top-left" for="">Subprueba</label>
+                <label class="grid-border grid-5to6 font-07" for=""><strong>Punt. Nat.</strong></label>
+                <label class="grid-border grid-6to12 border-top-rigth" for="">Puntuaciones escalares </label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Diseño con cubos</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="DC">Diseño con cubos</label>
+                <input class="grid-border grid-5to6" type="number" name="inputDC" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Semejanzas</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="SE">Semejanzas</label>
+                <input class="grid-border grid-5to6" type="number" name="inputSE" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Retención de dígitos</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="RD">Retención de dígitos</label>
+                <input class="grid-border grid-5to6" type="number" name="inputRD" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Conceptos con dibujos</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="CD">Conceptos con dibujos</label>
+                <input class="grid-border grid-5to6" type="number" name="inputCD" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Claves</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="CL">Claves</label>
+                <input class="grid-border grid-5to6" type="number" name="inputCL" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Vocabulario</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="VB">Vocabulario</label>
+                <input class="grid-border grid-5to6" type="number" name="inputVB" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Sucesión de números y letras</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="NL">Sucesión de números y letras</label>
+                <input class="grid-border grid-5to6" type="number" name="inputNL" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Matrices</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="MT">Matrices</label>
+                <input class="grid-border grid-5to6" type="number" name="inputMT" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Comprensión</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="CM">Comprensión</label>
+                <input class="grid-border grid-5to6" type="number" name="inputCM" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09" for="name">Búsqueda de símbolos</label>
-                <input class="grid-border grid-5to6" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="BS">Búsqueda de símbolos</label>
+                <input class="grid-border grid-5to6" type="number" name="inputBS" required="required"/>
+                <label class="grid-border grid-6to7" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11" for=""></label>
+                <label class="grid-border grid-11to12" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09 background-var" for="name">(Figuras incompletas)</label>
-                <input class="grid-border grid-5to6 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7 background-var" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9" type="number" name="nombre" required="required">(<span style="color:transparent;"># #</span>)</label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12 background-pri" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 background-var" for="FI">(Figuras incompletas)</label>
+                <input class="grid-border grid-5to6 background-var" type="number" name="inputFI" required="required"/>
+                <label class="grid-border grid-6to7 background-var" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9" for="">(<span style="color:transparent;"># #</span>)</label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09 background-var" for="name">(Registros)</label>
-                <input class="grid-border grid-5to6 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7 background-var" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11" type="number" name="nombre" required="required">(<span style="color:transparent;"># #</span>)</label>
-                <label class="grid-border grid-11to12 background-pri" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 background-var" for="RG">(Registros)</label>
+                <input class="grid-border grid-5to6 background-var" type="number" name="inputRG" required="required"/>
+                <label class="grid-border grid-6to7 background-var" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11" for="">(<span style="color:transparent;"># #</span>)</label>
+                <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09 background-var" for="name">(Información)</label>
-                <input class="grid-border grid-5to6 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7 background-var" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8" type="number" name="nombre" required="required">(<span style="color:transparent;"># #</span>)</label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12 background-pri" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 background-var" for="IN">(Información)</label>
+                <input class="grid-border grid-5to6 background-var" type="number" name="inputIN" required="required"/>
+                <label class="grid-border grid-6to7 background-var" for=""></label>
+                <label class="grid-border grid-7to8" for="">(<span style="color:transparent;"># #</span>)</label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09 background-var" for="name">(Aritmética)</label>
-                <input class="grid-border grid-5to6 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7 background-var" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10" type="number" name="nombre" required="required">(<span style="color:transparent;"># #</span>)</label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12 background-pri" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 background-var" for="AR">(Aritmética)</label>
+                <input class="grid-border grid-5to6 background-var" type="number" name="inputAR" required="required"/>
+                <label class="grid-border grid-6to7 background-var" for=""></label>
+                <label class="grid-border grid-7to8 background-pri" for=""></label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10" for="">(<span style="color:transparent;"># #</span>)</label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-border grid-1to5 font-09 border-bottom-left background-var" for="name">Palabras en contexto (Pistas)</label>
-                <input class="grid-border grid-5to6 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-6to7 background-var" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-7to8" type="number" name="nombre" required="required">(<span style="color:transparent;"># #</span>)</label>
-                <label class="grid-border grid-8to9 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 background-pri" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12 background-pri" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 border-bottom-left background-var" for="PC">Palabras en contexto (Pistas)</label>
+                <input class="grid-border grid-5to6 background-var" type="number" name="inputPC" required="required"/>
+                <label class="grid-border grid-6to7 background-var" for=""></label>
+                <label class="grid-border grid-7to8" for="">(<span style="color:transparent;"># #</span>)</label>
+                <label class="grid-border grid-8to9 background-pri" for=""></label>
+                <label class="grid-border grid-9to10 background-pri" for=""></label>
+                <label class="grid-border grid-10to11 background-pri" for=""></label>
+                <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-1to7 text-end" for="name"><strong>Suma de puntuaciones escalares</strong></label>
-                <label class="grid-border grid-7to8 border-bottom-left input-result" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-8to9 input-result" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to10 input-result" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-10to11 input-result" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-11to12 border-bottom-rigth input-result" type="number" name="nombre" required="required"></label>
+                <label class="grid-1to7 text-end" for="sumaPuntEsc"><strong>Suma de puntuaciones escalares</strong></label>
+                <label class="grid-border grid-7to8 border-bottom-left input-result" for=""></label>
+                <label class="grid-border grid-8to9 input-result" for=""></label>
+                <label class="grid-border grid-9to10 input-result" for=""></label>
+                <label class="grid-border grid-10to11 input-result" for=""></label>
+                <label class="grid-border grid-11to12 border-bottom-rigth input-result" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-1to7 text-end" for="name"></label>
-                <label class="grid-7to8 border-bottom-left font-090" type="number" name="nombre" required="required">ICV</label>
-                <label class="grid-8to9 font-090" type="number" name="nombre" required="required">IRP</label>
-                <label class="grid-9to10 font-090" type="number" name="nombre" required="required">IMT</label>
-                <label class="grid-10to11 font-090" type="number" name="nombre" required="required">IVP</label>
-                <label class="grid-11to12 border-bottom-rigth font-090" type="number" name="nombre" required="required">CIT</label>
+                <label class="grid-1to7 text-end" for=""></label>
+                <label class="grid-7to8 border-bottom-left font-090" for="">ICV</label>
+                <label class="grid-8to9 font-090" for="">IRP</label>
+                <label class="grid-9to10 font-090" for="">IMT</label>
+                <label class="grid-10to11 font-090" for="">IVP</label>
+                <label class="grid-11to12 border-bottom-rigth font-090" for="">CIT</label>
               </div>
             </form>
           </article>
           <article> 
             <form action="">
               <div> 
-                <label class="label-table border-top-left" for="name"> </label>
-                <label class="input-table font-075 background-pri text-white" for="name">Total de las 10 subpruebas</label>
-                <label class="input-table font-075 background-pri text-white" for="name">3 de Comprensión verbal</label>
-                <label class="input-table border-top-rigth font-075 background-pri text-white" for="name">3 de Razonamiento perceptual</label>
-                <label class="label-table font-085" for="name">Suma de puntuaciones escalares</label>
-                <label class="input-table" type="number" placeholder="Ex: 2021" name="nombre" required="required"></label>
-                <label class="input-table" type="number" placeholder="Ex: 09" name="nombre" required="required"></label>
-                <label class="input-table" type="number" placeholder="Ex: 04" name="nombre" required="required"></label>
-                <label class="label-table font-085" for="name">Número de subpruebas</label>
-                <label class="input-table" type="number" placeholder="Ex: 2010" name="nombre" required="required">÷10</label>
-                <label class="input-table" type="number" placeholder="Ex: 03" name="nombre" required="required">+3</label>
-                <label class="input-table" type="number" placeholder="Ex: 23" name="nombre" required="required">÷3</label>
-                <label class="label-table border-bottom-left font-085" for="name">Puntuación media</label>
-                <label class="input-table" type="number" placeholder="Year" name="nombre" required="required"></label>
-                <label class="input-table" type="number" placeholder="Month" name="nombre" required="required"></label>
-                <label class="input-table border-bottom-rigth" type="number" placeholder="Day" name="nombre" required="required"></label>
+                <label class="label-table border-top-left" for=""> </label>
+                <label class="input-table font-075 background-pri text-white" for="">Total de las 10 subpruebas</label>
+                <label class="input-table font-075 background-pri text-white" for="">3 de Comprensión verbal</label>
+                <label class="input-table border-top-rigth font-075 background-pri text-white" for="">3 de Razonamiento perceptual</label>
+                <label class="label-table font-085" for="">Suma de puntuaciones escalares</label>
+                <label class="input-table" for=""></label>
+                <label class="input-table" for=""></label>
+                <label class="input-table" for=""></label>
+                <label class="label-table font-085" for="">Número de subpruebas</label>
+                <label class="input-table" for="">÷10</label>
+                <label class="input-table" for="">+3</label>
+                <label class="input-table" for="">÷3</label>
+                <label class="label-table border-bottom-left font-085" for="">Puntuación media</label>
+                <label class="input-table" for=""></label>
+                <label class="input-table" for=""></label>
+                <label class="input-table border-bottom-rigth" for=""></label>
               </div>
             </form>
           </article>
@@ -279,46 +279,46 @@
             </hgroup>
             <form action="">
               <div class="grid13">
-                <label class="grid-border grid-1a5 border-top-left font-090" for="name">Escala</label>
-                <label class="grid-border grid-5to7 font-07" type="number" name="nombre" required="required">Suma de puntuaciones escalares</label>
-                <label class="grid-border grid-7to9 font-07" type="number" name="nombre" required="required">Índice compuesto</label>
-                <label class="grid-border grid-9to11 font-07" type="number" name="nombre" required="required">Rango percentil</label>
-                <label class="grid-border grid13-11to13 border-top-rigth font-07" type="number" name="nombre" required="required">Intervalo de confianza de 95%</label>
+                <label class="grid-border grid-1a5 border-top-left font-090" for="">Escala</label>
+                <label class="grid-border grid-5to7 font-07" for="">Suma de puntuaciones escalares</label>
+                <label class="grid-border grid-7to9 font-07" for="">Índice compuesto</label>
+                <label class="grid-border grid-9to11 font-07" for="">Rango percentil</label>
+                <label class="grid-border grid13-11to13 border-top-rigth font-07" for="">Intervalo de confianza de 95%</label>
               </div>
               <div class="grid13">
-                <label class="grid-border grid-1to5 font-09" for="name">Comprensión verbal</label>
-                <input class="grid-border grid-5to7 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-7to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid13-11to13" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="calculoCV">Comprensión verbal</label>
+                <label class="grid-border grid-5to7 background-var" for=""> </label>
+                <label class="grid-border grid-7to9" for=""></label>
+                <label class="grid-border grid-9to11" for=""></label>
+                <label class="grid-border grid13-11to13" for=""></label>
               </div>
               <div class="grid13">
-                <label class="grid-border grid-1to5 font-09" for="name">Razonamiento perceptual</label>
-                <input class="grid-border grid-5to7 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-7to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid13-11to13" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="calculoRP">Razonamiento perceptual</label>
+                <label class="grid-border grid-5to7 background-var" for=""> </label>
+                <label class="grid-border grid-7to9" for=""></label>
+                <label class="grid-border grid-9to11" for=""></label>
+                <label class="grid-border grid13-11to13" for=""></label>
               </div>
               <div class="grid13">
-                <label class="grid-border grid-1to5 font-09" for="name">Memoria de trabajo</label>
-                <input class="grid-border grid-5to7 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-7to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid13-11to13" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="calculoMT">Memoria de trabajo</label>
+                <label class="grid-border grid-5to7 background-var" for=""> </label>
+                <label class="grid-border grid-7to9" for=""></label>
+                <label class="grid-border grid-9to11" for=""></label>
+                <label class="grid-border grid13-11to13" for=""></label>
               </div>
               <div class="grid13">
-                <label class="grid-border grid-1to5 font-09" for="name">Velocidad de procesamiento</label>
-                <input class="grid-border grid-5to7 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-7to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid13-11to13" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09" for="calculoVP">Velocidad de procesamiento</label>
+                <label class="grid-border grid-5to7 background-var" for=""> </label>
+                <label class="grid-border grid-7to9" for=""></label>
+                <label class="grid-border grid-9to11" for=""></label>
+                <label class="grid-border grid13-11to13" for=""></label>
               </div>
               <div class="grid13">
-                <label class="grid-border grid-1to5 font-09 border-bottom-left" for="name">Escala Total</label>
-                <input class="grid-border grid-5to7 background-var" type="number" name="nombre" required="required"/>
-                <label class="grid-border grid-7to9" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid-9to11" type="number" name="nombre" required="required"></label>
-                <label class="grid-border grid13-11to13 border-bottom-rigth" type="number" name="nombre" required="required"></label>
+                <label class="grid-border grid-1to5 font-09 border-bottom-left" for="calculoET">Escala Total</label>
+                <label class="grid-border grid-5to7 background-var" for=""> </label>
+                <label class="grid-border grid-7to9" for=""></label>
+                <label class="grid-border grid-9to11" for=""></label>
+                <label class="grid-border grid13-11to13 border-bottom-rigth" for=""></label>
               </div>
             </form>
           </article>
@@ -331,388 +331,388 @@
             <h3>Perfil de puntuaciones escalares de subprueba</h3>
             <form action="">
               <div class="grid16">
-                <label class="grid-border-noBottom grid16-1to6 border-top-left font-07" for="name">Comprensión verval</label>
-                <label class="grid-border-noBottom grid16-6to10 font-07" type="number" name="nombre" required="required">Razonamiento perceptual</label>
-                <label class="grid-border-noBottom grid16-10to13 font-07" type="number" name="nombre" required="required">Memoria de trabajo</label>
-                <label class="grid-border-noBottom grid16-13to16 font-07 border-top-rigth" type="number" name="nombre" required="required">Velocidad de procesamiento</label>
+                <label class="grid-border-noBottom grid16-1to6 border-top-left font-07" for="">Comprensión verval</label>
+                <label class="grid-border-noBottom grid16-6to10 font-07" for="">Razonamiento perceptual</label>
+                <label class="grid-border-noBottom grid16-10to13 font-07" for="">Memoria de trabajo</label>
+                <label class="grid-border-noBottom grid16-13to16 font-07 border-top-rigth" for="">Velocidad de procesamiento</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
+                <label class="font-07" for=""><span style="color:transparent;"># # </span></label>
                 <label class="grid-border-left font-07" for="name">SE</label>
-                <label class="font-07" type="number" name="nombre" required="required">VB</label>
-                <label class="font-07" type="number" name="nombre" required="required">CM</label>
-                <label class="font-07" type="number" name="nombre" required="required">(IN)</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">(PC)</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">DC</label>
-                <label class="font-07" type="number" name="nombre" required="required">CD</label>
-                <label class="font-07" type="number" name="nombre" required="required">MT</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">(FI)</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">RD</label>
-                <label class="font-07" type="number" name="nombre" required="required">NL</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">(AR)</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">CL</label>
-                <label class="font-07" type="number" name="nombre" required="required">BS</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">(RG)</label>
+                <label class="font-07" for="">VB</label>
+                <label class="font-07" for="">CM</label>
+                <label class="font-07" for="">(IN)</label>
+                <label class="grid-border-right font-07" for="">(PC)</label>
+                <label class="grid-border-left font-07" for="">DC</label>
+                <label class="font-07" for="">CD</label>
+                <label class="font-07" for="">MT</label>
+                <label class="grid-border-right font-07" for="">(FI)</label>
+                <label class="grid-border-left font-07" for="">RD</label>
+                <label class="font-07" for="">NL</label>
+                <label class="grid-border-right font-07" for="">(AR)</label>
+                <label class="grid-border-left font-07" for="">CL</label>
+                <label class="font-07" for="">BS</label>
+                <label class="grid-border-right font-07" for="">(RG)</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
+                <label class="font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border font-07" for=""><span style="color:transparent;"># # </span></label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">19</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">19</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">18</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">18</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">17</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">17</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">16</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">16</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">15</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">15</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">14</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">14</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">13</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">13</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">12</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">12</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">11</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">11</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">10</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">10</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">9</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">9</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">8</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">8</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">7</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">7</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">6</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">6</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">5</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">5</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">4</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">4</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">3</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">3</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">2</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">• </label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">2</label>
+                <label class="grid-border-left font-07" for="">• </label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="font-07" for="">• </label>
+                <label class="grid-border-right font-07" for="">•</label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">• </label>
+                <label class="grid-border-left font-07" for="">•</label>
+                <label class="font-07" for="">•</label>
+                <label class="grid-border-right font-07" for="">•</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">1</label>
-                <label class="border-bottom-left grid-border-left grid-border-bottom font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">• </label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">•</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">•</label>
-                <label class="border-bottom-rigth grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">•</label>
+                <label class="font-07" for="">1</label>
+                <label class="border-bottom-left grid-border-left grid-border-bottom font-07" for="">• </label>
+                <label class="grid-border-bottom font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">• </label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">•</label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">• </label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">•</label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">•</label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">• </label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">•</label>
+                <label class="grid-border-bottom font-07" for="">•</label>
+                <label class="border-bottom-rigth grid-border-bottom grid-border-right font-07" for="">•</label>
               </div>
             </form>
           </article>
@@ -723,467 +723,467 @@
             <form action="">
               <div class="grid16">
                 <label class="grid-border-noBottom grid16-2to5 border-top-left font-07" for="name">ICV</label>
-                <label class="grid-border-noBottom grid16-5to8 font-07" type="number" name="nombre" required="required">IRP</label>
-                <label class="grid-border-noBottom grid16-8to11 font-07" type="number" name="nombre" required="required">IMT</label>
-                <label class="grid-border-noBottom grid16-11to14 font-07" type="number" name="nombre" required="required">IVP</label>
-                <label class="grid-border-noBottom grid16-14to17 font-07 border-top-rigth" type="number" name="nombre" required="required">CIT</label>
+                <label class="grid-border-noBottom grid16-5to8 font-07" for="">IRP</label>
+                <label class="grid-border-noBottom grid16-8to11 font-07" for="">IMT</label>
+                <label class="grid-border-noBottom grid16-11to14 font-07" for="">IVP</label>
+                <label class="grid-border-noBottom grid16-14to17 font-07 border-top-rigth" for="">CIT</label>
               </div>
               <div class="grid16">
                 <label class="grid-border-noBottom grid16-2to5 font-07" for="name"> <span style="color:transparent;"># # </span></label>
-                <label class="grid-border-noBottom grid16-5to8 font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span></label>
-                <label class="grid-border-noBottom grid16-8to11 font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border-noBottom grid16-11to14 font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
-                <label class="grid-border-noBottom grid16-14to17 font-07" type="number" name="nombre" required="required"><span style="color:transparent;"># # </span></label>
+                <label class="grid-border-noBottom grid16-5to8 font-07" for=""> <span style="color:transparent;"># # </span></label>
+                <label class="grid-border-noBottom grid16-8to11 font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border-noBottom grid16-11to14 font-07" for=""><span style="color:transparent;"># # </span></label>
+                <label class="grid-border-noBottom grid16-14to17 font-07" for=""><span style="color:transparent;"># # </span></label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">160 -</label>
-                <label class="grid-border-top grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-top font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-top grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-top grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-top grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">160 -</label>
+                <label class="grid-border-top grid-border-left font-07" for="">- </label>
+                <label class="grid-border-top font-07" for="">-</label>
+                <label class="grid-border-top grid-border-right font-07" for="">-</label>
+                <label class="grid-border-top grid-border-left font-07" for="">-</label>
+                <label class="grid-border-top font-07" for="">-</label>
+                <label class="grid-border-top grid-border-right font-07" for="">-</label>
+                <label class="grid-border-top grid-border-left font-07" for="">-</label>
+                <label class="grid-border-top font-07" for="">- </label>
+                <label class="grid-border-top grid-border-right font-07" for="">-</label>
+                <label class="grid-border-top grid-border-left font-07" for="">-</label>
+                <label class="grid-border-top font-07" for="">-</label>
+                <label class="grid-border-top grid-border-right font-07" for="">- </label>
+                <label class="grid-border-top grid-border-left font-07" for="">-</label>
+                <label class="grid-border-top font-07" for="">-</label>
+                <label class="grid-border-top grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">150 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">150 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">140 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">140 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">130 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">130 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">120 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">120 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">110 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">110 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">100 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">— </label>
-                <label class="font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">—</label>
-                <label class="font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">—</label>
-                <label class="font-07" type="number" name="nombre" required="required">— </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">—</label>
-                <label class="font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">— </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">—</label>
-                <label class="font-07" type="number" name="nombre" required="required">—</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">—</label>
+                <label class="font-07" for="">100 -</label>
+                <label class="grid-border-left font-07" for="">— </label>
+                <label class="font-07" for="">—</label>
+                <label class="grid-border-right font-07" for="">—</label>
+                <label class="grid-border-left font-07" for="">—</label>
+                <label class="font-07" for="">—</label>
+                <label class="grid-border-right font-07" for="">—</label>
+                <label class="grid-border-left font-07" for="">—</label>
+                <label class="font-07" for="">— </label>
+                <label class="grid-border-right font-07" for="">—</label>
+                <label class="grid-border-left font-07" for="">—</label>
+                <label class="font-07" for="">—</label>
+                <label class="grid-border-right font-07" for="">— </label>
+                <label class="grid-border-left font-07" for="">—</label>
+                <label class="font-07" for="">—</label>
+                <label class="grid-border-right font-07" for="">—</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">90 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">90 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">80 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">80 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">70 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">70 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">60 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">60 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">50 -</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">50 -</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required"> <span style="color:transparent;"># # </span>-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for=""> <span style="color:transparent;"># # </span>-</label>
+                <label class="grid-border-left font-07" for="">- </label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">- </label>
+                <label class="grid-border-right font-07" for="">-</label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">- </label>
+                <label class="grid-border-left font-07" for="">-</label>
+                <label class="font-07" for="">-</label>
+                <label class="grid-border-right font-07" for="">-</label>
               </div>
               <div class="grid16">
-                <label class="font-07" type="number" name="nombre" required="required">40 -</label>
-                <label class="grid-border-bottom border-bottom-left grid-border-left font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom grid-border-right font-07" type="number" name="nombre" required="required">- </label>
-                <label class="grid-border-bottom grid-border-left font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom font-07" type="number" name="nombre" required="required">-</label>
-                <label class="grid-border-bottom border-bottom-rigth grid-border-right font-07" type="number" name="nombre" required="required">-</label>
+                <label class="font-07" for="">40 -</label>
+                <label class="grid-border-bottom border-bottom-left grid-border-left font-07" for="">- </label>
+                <label class="grid-border-bottom font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">-</label>
+                <label class="grid-border-bottom font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">-</label>
+                <label class="grid-border-bottom font-07" for="">- </label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">-</label>
+                <label class="grid-border-bottom font-07" for="">-</label>
+                <label class="grid-border-bottom grid-border-right font-07" for="">- </label>
+                <label class="grid-border-bottom grid-border-left font-07" for="">-</label>
+                <label class="grid-border-bottom font-07" for="">-</label>
+                <label class="grid-border-bottom border-bottom-rigth grid-border-right font-07" for="">-</label>
               </div>
             </form>
           </article>
@@ -1192,4 +1192,5 @@
     </main>
   </body>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" rossorigin="anonymous"></script>
+  <script src="../js/age.js"></script>
 </html>

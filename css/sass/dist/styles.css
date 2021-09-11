@@ -353,6 +353,15 @@ main section article .grid16 label {
   background-color: #d6b3ac;
 }
 
+.button {
+  cursor: pointer;
+}
+.button:hover {
+  color: #FEFEFE;
+  font-weight: bold;
+  background-color: #881400;
+}
+
 @media screen and (max-width: 700px) {
   main {
     flex-wrap: wrap;
