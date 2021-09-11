@@ -43,17 +43,30 @@ function calculateYear() {
   resultDay.innerText = ageDay;
 
   if (ageMonth < 0) {
-    var newAgenYear = ageYear - 1;
+    var newAgeYear = ageYear - 1;
     var newAgeMonth = 12 + ageMonth;
     console.log("Se cumple condición para los que aún no cumplen años.");
 
     var _resultYear = document.getElementById("resultYear");
 
-    _resultYear.innerText = newAgenYear;
+    _resultYear.innerText = newAgeYear;
 
     var _resultMonth = document.getElementById("resultMonth");
 
     _resultMonth.innerText = newAgeMonth;
+  } else {
+    console.log("Cumplió años este años.");
+  }
+
+  if (ageDay > 30) {
+    var newAgeDay = 30 + parseInt(valueBirthdayDay) - parseInt(valueTodayDay);
+    console.log("Se cumple condición para día de nacido.");
+
+    var _resultDay = document.getElementById("resultDay");
+
+    _resultDay.innerText = newAgeDay;
+  } else {
+    console.log("No se aplicó la 2° formula para calcular días cumplidos.");
   }
 }
 
