@@ -23,7 +23,7 @@ block contenidos
             label.input-table(for="") Mes
             label.input-table.border-top-rigth(for="") Día
 
-            label.label-table(for="dateToday") Año de evaluación
+            label.label-table.button(for="dateToday" type="button" onclick="calculateToday()") Año de evaluación
             input.input-table(type="number" placeholder="Ex: 2021" name="yearToday" required id="yearToday")
             input.input-table(type="number" placeholder="Ex: 09" name="monthToday" required id="monthToday")
             input.input-table(type="number" placeholder="Ex: 04" name="dayToday" required id="dayToday")
@@ -192,7 +192,7 @@ block contenidos
             label.grid-border.grid-10to11.background-pri(for="")
             label.grid-border.grid-11to12.background-pri(for="")
           .grid
-            label.grid-1to7.text-end(for="sumaPuntEsc"): strong Suma de puntuaciones escalares
+            label.grid-1to7.text-end.button(for="sumaPuntEsc" type="button" onclick="calculateSumScores()"): strong Suma de puntuaciones escalares
             label.grid-border.grid-7to8.border-bottom-left.input-result(for="")
             label.grid-border.grid-8to9.input-result(for="")
             label.grid-border.grid-9to10.input-result(for="")

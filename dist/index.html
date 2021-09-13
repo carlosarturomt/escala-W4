@@ -58,7 +58,7 @@
                 <label class="input-table" for="">Año</label>
                 <label class="input-table" for="">Mes</label>
                 <label class="input-table border-top-rigth" for="">Día</label>
-                <label class="label-table" for="dateToday">Año de evaluación</label>
+                <label class="label-table button" for="dateToday" type="button" onclick="calculateToday()">Año de evaluación</label>
                 <input class="input-table" type="number" placeholder="Ex: 2021" name="yearToday" required="required" id="yearToday"/>
                 <input class="input-table" type="number" placeholder="Ex: 09" name="monthToday" required="required" id="monthToday"/>
                 <input class="input-table" type="number" placeholder="Ex: 04" name="dayToday" required="required" id="dayToday"/>
@@ -234,7 +234,7 @@
                 <label class="grid-border grid-11to12 background-pri" for=""></label>
               </div>
               <div class="grid">
-                <label class="grid-1to7 text-end" for="sumaPuntEsc"><strong>Suma de puntuaciones escalares</strong></label>
+                <label class="grid-1to7 text-end button" for="sumaPuntEsc" type="button" onclick="calculateSumScores()"><strong>Suma de puntuaciones escalares</strong></label>
                 <label class="grid-border grid-7to8 border-bottom-left input-result" for=""></label>
                 <label class="grid-border grid-8to9 input-result" for=""></label>
                 <label class="grid-border grid-9to10 input-result" for=""></label>
@@ -1193,4 +1193,5 @@
   </body>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" rossorigin="anonymous"></script>
   <script src="../js/age.js"></script>
+  <script src="../js/tableAge7-8.js"></script>
 </html>

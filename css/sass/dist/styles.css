@@ -359,6 +359,7 @@ main section article .grid16 label {
 .button:hover {
   color: #FEFEFE;
   font-weight: bold;
+  border: 1px solid #360b00;
   background-color: #881400;
 }
 
