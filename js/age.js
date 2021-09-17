@@ -61,7 +61,7 @@ function calculateToday() {
   );
 }
 console.groupEnd();
-
+// ..........................
 console.group("Calcular Edad");
 function calculateYear() {
   //  Y E A R
@@ -82,7 +82,7 @@ function calculateYear() {
 
   const ageYear = valueTodayYear - valueBirthdayYear;
   const ageMonth = valueTodayMonth - valueBirthdayMonth;
-  const ageDay = 30 - parseInt(valueBirthdayDay) + parseInt(valueTodayDay);
+  const ageDay = 31 - parseInt(valueBirthdayDay) + parseInt(valueTodayDay);
 
   const resultYear = document.getElementById("resultYear");
   resultYear.innerText = ageYear;
@@ -94,24 +94,40 @@ function calculateYear() {
   if (ageMonth < 0) {
     const newAgeYear = ageYear - 1;
     const newAgeMonth = 12 + ageMonth;
-    console.log("Se cumple condición para los que aún no cumplen años.");
+    console.log("Se cumple condición para los que aún no cumplen año.");
 
     const resultYear = document.getElementById("resultYear");
     resultYear.innerText = newAgeYear;
     const resultMonth = document.getElementById("resultMonth");
     resultMonth.innerText = newAgeMonth;
   } else {
-    console.log("Cumplió años este años.");
+    console.log("Cumplió años este año.");
   }
-  if (ageDay > 30) {
-    const newAgeDay = 30 + parseInt(valueBirthdayDay) - parseInt(valueTodayDay);
+  if (ageDay > 31) {
+    const newAgeDay = 31 + parseInt(valueBirthdayDay) - parseInt(valueTodayDay);
 
     console.log("Se cumple condición para día de nacido.");
 
     const resultDay = document.getElementById("resultDay");
     resultDay.innerText = newAgeDay;
-  } else {
-    console.log("No se aplicó la 2° formula para calcular días cumplidos.");
+  } 
+  if (valueTodayDay >= valueBirthdayDay) {
+    const ageDay = parseInt(valueTodayDay) - parseInt(valueBirthdayDay);
+    const resultDay = document.getElementById("resultDay");
+    resultDay.innerText = ageDay;  
+    console.log('Hoy o bien hace unos días ha cumplido otro mes.')
+  }
+  if ((valueTodayMonth == valueBirthdayMonth)&&(valueTodayDay < valueBirthdayDay)){
+    const ageYearAlter = ageYear - 1;
+    const newAgeMonth = 11;
+    const ageDay = 31 - parseInt(valueBirthdayDay) + parseInt(valueTodayDay);
+    const resultYear = document.getElementById("resultYear");
+    resultYear.innerText = ageYearAlter;  
+    const resultMonth = document.getElementById("resultMonth");
+    resultMonth.innerText = newAgeMonth;
+    const resultDay = document.getElementById("resultDay");
+    resultDay.innerText = ageDay;  
+    console.log('Este mes cumple años.')
   }
 }
 console.groupEnd();
