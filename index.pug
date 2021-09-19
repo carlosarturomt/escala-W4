@@ -183,8 +183,8 @@ block contenidos
           .grid
             label.grid-border.grid-1to5.font-09.border-bottom-left.background-var(for="PC") Palabras en contexto (Pistas)
             input.grid-border.grid-5to6.background-var(type="number" name="inputPC" required id="inputPC") 
-            label.grid-border.grid-6to7.background-var(for="")
-            label.grid-border.grid-7to8(for="") (
+            label.grid-border.grid-6to7.background-var#punctuationPC_0(for="")
+            label.grid-border.grid-7to8#punctuationPC_1(for="") (
               span(style="color:transparent;") # #
               |)
             label.grid-border.grid-8to9.background-pri(for="")
@@ -193,11 +193,11 @@ block contenidos
             label.grid-border.grid-11to12.background-pri(for="")
           .grid
             label.grid-1to7.text-end.button(for="sumaPuntEsc" type="button" onclick="calculateSumScores()"): strong Suma de puntuaciones escalares
-            label.grid-border.grid-7to8.border-bottom-left.input-result(for="")
-            label.grid-border.grid-8to9.input-result(for="")
-            label.grid-border.grid-9to10.input-result(for="")
-            label.grid-border.grid-10to11.input-result(for="")
-            label.grid-border.grid-11to12.border-bottom-rigth.input-result(for="")
+            label.grid-border.grid-7to8.border-bottom-left.input-result#SumScoresICV(for="")
+            label.grid-border.grid-8to9.input-result#SumScoresIRP(for="")
+            label.grid-border.grid-9to10.input-result#SumScoresIMT(for="")
+            label.grid-border.grid-10to11.input-result#SumScoresIVP(for="")
+            label.grid-border.grid-11to12.border-bottom-rigth.input-result#SumScoresCIT(for="")
           .grid
             label.grid-1to7.text-end(for="")
             label.grid-7to8.border-bottom-left.font-090(for="") ICV

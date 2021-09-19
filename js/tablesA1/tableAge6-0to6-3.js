@@ -1,49 +1,49 @@
 function calculateSumScores() {
   const inputDC = document.getElementById("inputDC");
   const valueinputDC = inputDC.value;
-  
+
   const inputSE = document.getElementById("inputSE");
   const valueinputSE = inputSE.value;
-  
+
   const inputRD = document.getElementById("inputRD");
   const valueinputRD = inputRD.value;
-  
+
   const inputCD = document.getElementById("inputCD");
   const valueinputCD = inputCD.value;
-  
+
   const inputCL = document.getElementById("inputCL");
   const valueinputCL = inputCL.value;
-  
+
   const inputVB = document.getElementById("inputVB");
   const valueinputVB = inputVB.value;
-  
+
   const inputNL = document.getElementById("inputNL");
   const valueinputNL = inputNL.value;
-  
+
   const inputMT = document.getElementById("inputMT");
   const valueinputMT = inputMT.value;
-  
+
   const inputCM = document.getElementById("inputCM");
   const valueinputCM = inputCM.value;
-  
+
   const inputBS = document.getElementById("inputBS");
   const valueinputBS = inputBS.value;
-  
+
   const inputFI = document.getElementById("inputFI");
   const valueinputFI = inputFI.value;
-  
+
   const inputRG = document.getElementById("inputRG");
   const valueinputRG = inputRG.value;
-  
+
   const inputIN = document.getElementById("inputIN");
   const valueinputIN = inputIN.value;
-  
+
   const inputAR = document.getElementById("inputAR");
   const valueinputAR = inputAR.value;
-  
+
   const inputPC = document.getElementById("inputPC");
   const valueinputPC = inputPC.value;
-    
+
   if (
     calculateYear() == "6,0" ||
     calculateYear() == "6,1" ||
@@ -241,7 +241,7 @@ function calculateSumScores() {
         const punctuationDC_2_40 = document.getElementById("punctuationDC_2");
         punctuationDC_2_40.innerText = 17;
         console.log("La Puntuación Escalar de DC es: 17");
-        break; 
+        break;
       case "46":
       case "47":
       case "48":
@@ -256,7 +256,7 @@ function calculateSumScores() {
         const punctuationDC_2_46 = document.getElementById("punctuationDC_2");
         punctuationDC_2_46.innerText = 18;
         console.log("La Puntuación Escalar de DC es: 18");
-        break;        
+        break;
       case "53":
       case "54":
       case "55":
@@ -280,9 +280,11 @@ function calculateSumScores() {
         const punctuationDC_2_53 = document.getElementById("punctuationDC_2");
         punctuationDC_2_53.innerText = 19;
         console.log("La Puntuación Escalar de DC es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de DC no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de DC no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........S E M E J A N Z A S..........//
@@ -447,7 +449,7 @@ function calculateSumScores() {
         const punctuationSE_2_40 = document.getElementById("punctuationSE_2");
         punctuationSE_2_40.innerText = 17;
         console.log("La Puntuación Escalar de SE es: 17");
-        break; 
+        break;
       case "23":
       case "24":
         const punctuationSE_0_46 = document.getElementById("punctuationSE_0");
@@ -457,7 +459,7 @@ function calculateSumScores() {
         const punctuationSE_2_46 = document.getElementById("punctuationSE_2");
         punctuationSE_2_46.innerText = 18;
         console.log("La Puntuación Escalar de SE es: 18");
-        break;        
+        break;
       case "25":
       case "26":
       case "27":
@@ -485,9 +487,11 @@ function calculateSumScores() {
         const punctuationSE_2_53 = document.getElementById("punctuationSE_2");
         punctuationSE_2_53.innerText = 19;
         console.log("La Puntuación Escalar de SE es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de SE no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de SE no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........R E T E N C I O N - D E - D I G I T O S..........//
@@ -648,7 +652,7 @@ function calculateSumScores() {
         const punctuationRD_2_40 = document.getElementById("punctuationRD_2");
         punctuationRD_2_40.innerText = 17;
         console.log("La Puntuación Escalar de RD es: 17");
-        break; 
+        break;
       case "18":
         const punctuationRD_0_46 = document.getElementById("punctuationRD_0");
         punctuationRD_0_46.innerText = 18;
@@ -657,7 +661,7 @@ function calculateSumScores() {
         const punctuationRD_2_46 = document.getElementById("punctuationRD_2");
         punctuationRD_2_46.innerText = 18;
         console.log("La Puntuación Escalar de RD es: 18");
-        break;       
+        break;
       case "19":
       case "20":
       case "21":
@@ -679,10 +683,12 @@ function calculateSumScores() {
         const punctuationRD_2_53 = document.getElementById("punctuationRD_2");
         punctuationRD_2_53.innerText = 19;
         console.log("La Puntuación Escalar de RD es: 19");
-        break;        
+        break;
       default:
-        alert("La Puntuación de RD no corresponde a ninguna equivalencia, verifica lo que has colocado.");
-        break;       
+        alert(
+          "La Puntuación de RD no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
+        break;
     }
     //..........C O N C E P T O - C O N - D I B U J O S..........//
     console.log("La Puntuación Natural de CD es: " + valueinputCD);
@@ -842,7 +848,7 @@ function calculateSumScores() {
         const punctuationCD_2_40 = document.getElementById("punctuationCD_2");
         punctuationCD_2_40.innerText = 17;
         console.log("La Puntuación Escalar de CD es: 17");
-        break; 
+        break;
       case "19":
         const punctuationCD_0_46 = document.getElementById("punctuationCD_0");
         punctuationCD_0_46.innerText = 18;
@@ -851,7 +857,7 @@ function calculateSumScores() {
         const punctuationCD_2_46 = document.getElementById("punctuationCD_2");
         punctuationCD_2_46.innerText = 18;
         console.log("La Puntuación Escalar de CD es: 18");
-        break;       
+        break;
       case "20":
       case "21":
       case "22":
@@ -868,9 +874,11 @@ function calculateSumScores() {
         const punctuationCD_2_53 = document.getElementById("punctuationCD_2");
         punctuationCD_2_53.innerText = 19;
         console.log("La Puntuación Escalar de CD es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de CD no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de CD no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........C L A V E S..........//
@@ -1075,7 +1083,7 @@ function calculateSumScores() {
         const punctuationCL_2_40 = document.getElementById("punctuationCL_2");
         punctuationCL_2_40.innerText = 17;
         console.log("La Puntuación Escalar de CL es: 17");
-        break; 
+        break;
       case "64":
         const punctuationCL_0_46 = document.getElementById("punctuationCL_0");
         punctuationCL_0_46.innerText = 18;
@@ -1084,7 +1092,7 @@ function calculateSumScores() {
         const punctuationCL_2_46 = document.getElementById("punctuationCL_2");
         punctuationCL_2_46.innerText = 18;
         console.log("La Puntuación Escalar de CL es: 18");
-        break;       
+        break;
       case "65":
         const punctuationCL_0_53 = document.getElementById("punctuationCL_0");
         punctuationCL_0_53.innerText = 19;
@@ -1093,9 +1101,11 @@ function calculateSumScores() {
         const punctuationCL_2_53 = document.getElementById("punctuationCL_2");
         punctuationCL_2_53.innerText = 19;
         console.log("La Puntuación Escalar de CL es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de CL no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de CL no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........V O C A B U L A R I O..........//
@@ -1268,7 +1278,7 @@ function calculateSumScores() {
         const punctuationVB_2_40 = document.getElementById("punctuationVB_2");
         punctuationVB_2_40.innerText = 17;
         console.log("La Puntuación Escalar de VB es: 17");
-        break; 
+        break;
       case "32":
       case "33":
         const punctuationVB_0_46 = document.getElementById("punctuationVB_0");
@@ -1278,7 +1288,7 @@ function calculateSumScores() {
         const punctuationVB_2_46 = document.getElementById("punctuationVB_2");
         punctuationVB_2_46.innerText = 18;
         console.log("La Puntuación Escalar de VB es: 18");
-        break;       
+        break;
       case "34":
       case "35":
       case "36":
@@ -1321,9 +1331,11 @@ function calculateSumScores() {
         const punctuationVB_2_53 = document.getElementById("punctuationVB_2");
         punctuationVB_2_53.innerText = 19;
         console.log("La Puntuación Escalar de VB es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de VB no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de VB no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........S U C E S I O N - D E - N U M E R O S - Y - L E T R A S..........//
@@ -1484,7 +1496,7 @@ function calculateSumScores() {
         const punctuationNL_2_40 = document.getElementById("punctuationNL_2");
         punctuationNL_2_40.innerText = 17;
         console.log("La Puntuación Escalar de NL es: 17");
-        break; 
+        break;
       case "18":
         const punctuationNL_0_46 = document.getElementById("punctuationNL_0");
         punctuationNL_0_46.innerText = 18;
@@ -1493,7 +1505,7 @@ function calculateSumScores() {
         const punctuationNL_2_46 = document.getElementById("punctuationNL_2");
         punctuationNL_2_46.innerText = 18;
         console.log("La Puntuación Escalar de NL es: 18");
-        break;       
+        break;
       case "19":
       case "20":
       case "21":
@@ -1513,9 +1525,11 @@ function calculateSumScores() {
         const punctuationNL_2_53 = document.getElementById("punctuationNL_2");
         punctuationNL_2_53.innerText = 19;
         console.log("La Puntuación Escalar de NL es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de NL no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de NL no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........M A T R I C E S..........//
@@ -1678,7 +1692,7 @@ function calculateSumScores() {
         const punctuationMT_2_40 = document.getElementById("punctuationMT_2");
         punctuationMT_2_40.innerText = 17;
         console.log("La Puntuación Escalar de MT es: 17");
-        break; 
+        break;
       case "21":
         const punctuationMT_0_46 = document.getElementById("punctuationMT_0");
         punctuationMT_0_46.innerText = 18;
@@ -1687,7 +1701,7 @@ function calculateSumScores() {
         const punctuationMT_2_46 = document.getElementById("punctuationMT_2");
         punctuationMT_2_46.innerText = 18;
         console.log("La Puntuación Escalar de MT es: 18");
-        break;       
+        break;
       case "22":
       case "23":
       case "24":
@@ -1709,9 +1723,11 @@ function calculateSumScores() {
         const punctuationMT_2_53 = document.getElementById("punctuationMT_2");
         punctuationMT_2_53.innerText = 19;
         console.log("La Puntuación Escalar de MT es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de MT no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de MT no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........C O M P R E N S I O N..........//
@@ -1875,7 +1891,7 @@ function calculateSumScores() {
         const punctuationCM_2_40 = document.getElementById("punctuationCM_2");
         punctuationCM_2_40.innerText = 17;
         console.log("La Puntuación Escalar de CM es: 17");
-        break; 
+        break;
       case "23":
       case "24":
         const punctuationCM_0_46 = document.getElementById("punctuationCM_0");
@@ -1885,7 +1901,7 @@ function calculateSumScores() {
         const punctuationCM_2_46 = document.getElementById("punctuationCM_2");
         punctuationCM_2_46.innerText = 18;
         console.log("La Puntuación Escalar de CM es: 18");
-        break;       
+        break;
       case "25":
       case "26":
       case "27":
@@ -1911,9 +1927,11 @@ function calculateSumScores() {
         const punctuationCM_2_53 = document.getElementById("punctuationCM_2");
         punctuationCM_2_53.innerText = 19;
         console.log("La Puntuación Escalar de CM es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de CM no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de CM no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........B U S Q U E D A - D E - S I M B O L O S..........//
@@ -2095,7 +2113,7 @@ function calculateSumScores() {
         const punctuationBS_2_40 = document.getElementById("punctuationBS_2");
         punctuationBS_2_40.innerText = 17;
         console.log("La Puntuación Escalar de BS es: 17");
-        break; 
+        break;
       case "40":
       case "41":
       case "42":
@@ -2106,7 +2124,7 @@ function calculateSumScores() {
         const punctuationBS_2_46 = document.getElementById("punctuationBS_2");
         punctuationBS_2_46.innerText = 18;
         console.log("La Puntuación Escalar de BS es: 18");
-        break;       
+        break;
       case "43":
       case "44":
       case "45":
@@ -2117,9 +2135,11 @@ function calculateSumScores() {
         const punctuationBS_2_53 = document.getElementById("punctuationBS_2");
         punctuationBS_2_53.innerText = 19;
         console.log("La Puntuación Escalar de BS es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de BS no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de BS no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........F I G U R A S - I N C O M P L E T A S..........//
@@ -2129,28 +2149,28 @@ function calculateSumScores() {
         const punctuationFI_0_0 = document.getElementById("punctuationFI_0");
         punctuationFI_0_0.innerText = 1;
         const punctuationFI_1_0 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_0.innerText = '( ' + 1 + ' )';
+        punctuationFI_1_0.innerText = 1;
         console.log("La Puntuación Escalar de FI es: 1");
         break;
       case "1":
         const punctuationFI_0_1 = document.getElementById("punctuationFI_0");
         punctuationFI_0_1.innerText = 2;
         const punctuationFI_1_1 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_1.innerText = '( ' + 2 + ' )';
+        punctuationFI_1_1.innerText = 2;
         console.log("La Puntuación Escalar de FI es: 2");
         break;
       case "2":
         const punctuationFI_0_2 = document.getElementById("punctuationFI_0");
         punctuationFI_0_2.innerText = 3;
         const punctuationFI_1_2 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_2.innerText = '( ' + 3 + ' )';
+        punctuationFI_1_2.innerText = 3;
         console.log("La Puntuación Escalar de FI es: 3");
         break;
       case "3":
         const punctuationFI_0_3 = document.getElementById("punctuationFI_0");
         punctuationFI_0_3.innerText = 4;
         const punctuationFI_1_3 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_3.innerText = '( ' + 4 + ' )';
+        punctuationFI_1_3.innerText = 4;
         console.log("La Puntuación Escalar de FI es: 4");
         break;
       case "4":
@@ -2158,7 +2178,7 @@ function calculateSumScores() {
         const punctuationFI_0_4 = document.getElementById("punctuationFI_0");
         punctuationFI_0_4.innerText = 5;
         const punctuationFI_1_4 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_4.innerText = '( ' + 5 + ' )';
+        punctuationFI_1_4.innerText = 5;
         console.log("La Puntuación Escalar de FI es: 5");
         break;
       case "6":
@@ -2166,14 +2186,14 @@ function calculateSumScores() {
         const punctuationFI_0_5 = document.getElementById("punctuationFI_0");
         punctuationFI_0_5.innerText = 6;
         const punctuationFI_1_5 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_5.innerText = '( ' + 6 + ' )';
+        punctuationFI_1_5.innerText = 6;
         console.log("La Puntuación Escalar de FI es: 6");
         break;
       case "8":
         const punctuationFI_0_6 = document.getElementById("punctuationFI_0");
         punctuationFI_0_6.innerText = 7;
         const punctuationFI_1_6 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_6.innerText = '( ' + 7 + ' )';
+        punctuationFI_1_6.innerText = 7;
         console.log("La Puntuación Escalar de FI es: 7");
         break;
       case "9":
@@ -2181,7 +2201,7 @@ function calculateSumScores() {
         const punctuationFI_0_8 = document.getElementById("punctuationFI_0");
         punctuationFI_0_8.innerText = 8;
         const punctuationFI_1_8 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_8.innerText = '( ' + 8 + ' )';
+        punctuationFI_1_8.innerText = 8;
         console.log("La Puntuación Escalar de FI es: 8");
         break;
       case "11":
@@ -2189,7 +2209,7 @@ function calculateSumScores() {
         const punctuationFI_0_11 = document.getElementById("punctuationFI_0");
         punctuationFI_0_11.innerText = 9;
         const punctuationFI_1_11 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_11.innerText = '( ' + 9 + ' )';
+        punctuationFI_1_11.innerText = 9;
         console.log("La Puntuación Escalar de FI es: 9");
         break;
       case "13":
@@ -2197,14 +2217,14 @@ function calculateSumScores() {
         const punctuationFI_0_13 = document.getElementById("punctuationFI_0");
         punctuationFI_0_13.innerText = 10;
         const punctuationFI_1_13 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_13.innerText = '( ' + 10 + ' )';
+        punctuationFI_1_13.innerText = 10;
         console.log("La Puntuación Escalar de FI es: 10");
         break;
       case "15":
         const punctuationFI_0_15 = document.getElementById("punctuationFI_0");
         punctuationFI_0_15.innerText = 11;
         const punctuationFI_1_15 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_15.innerText = '( ' + 11 + ' )';
+        punctuationFI_1_15.innerText = 11;
         console.log("La Puntuación Escalar de FI es: 11");
         break;
       case "16":
@@ -2212,7 +2232,7 @@ function calculateSumScores() {
         const punctuationFI_0_17 = document.getElementById("punctuationFI_0");
         punctuationFI_0_17.innerText = 12;
         const punctuationFI_1_17 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_17.innerText = '( ' + 12 + ' )';
+        punctuationFI_1_17.innerText = 12;
         console.log("La Puntuación Escalar de FI es: 12");
         break;
       case "18":
@@ -2220,28 +2240,28 @@ function calculateSumScores() {
         const punctuationFI_0_20 = document.getElementById("punctuationFI_0");
         punctuationFI_0_20.innerText = 13;
         const punctuationFI_1_20 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_20.innerText = '( ' + 13 + ' )';
+        punctuationFI_1_20.innerText = 13;
         console.log("La Puntuación Escalar de FI es: 13");
         break;
       case "20":
         const punctuationFI_0_24 = document.getElementById("punctuationFI_0");
         punctuationFI_0_24.innerText = 14;
         const punctuationFI_1_24 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_24.innerText = '( ' + 14 + ' )';
+        punctuationFI_1_24.innerText = 14;
         console.log("La Puntuación Escalar de FI es: 14");
         break;
       case "21":
         const punctuationFI_0_29 = document.getElementById("punctuationFI_0");
         punctuationFI_0_29.innerText = 15;
         const punctuationFI_1_29 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_29.innerText = '( ' + 15 + ' )';
+        punctuationFI_1_29.innerText = 15;
         console.log("La Puntuación Escalar de FI es: 15");
         break;
       case "22":
         const punctuationFI_0_34 = document.getElementById("punctuationFI_0");
         punctuationFI_0_34.innerText = 16;
         const punctuationFI_1_34 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_34.innerText = '( ' + 16 + ' )';
+        punctuationFI_1_34.innerText = 16;
         console.log("La Puntuación Escalar de FI es: 16");
         break;
       case "23":
@@ -2249,16 +2269,16 @@ function calculateSumScores() {
         const punctuationFI_0_40 = document.getElementById("punctuationFI_0");
         punctuationFI_0_40.innerText = 17;
         const punctuationFI_1_40 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_40.innerText = '( ' + 17 + ' )';
+        punctuationFI_1_40.innerText = 17;
         console.log("La Puntuación Escalar de FI es: 17");
-        break; 
+        break;
       case "25":
         const punctuationFI_0_46 = document.getElementById("punctuationFI_0");
         punctuationFI_0_46.innerText = 18;
         const punctuationFI_1_46 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_46.innerText = '( ' + 18 + ' )';
+        punctuationFI_1_46.innerText = 18;
         console.log("La Puntuación Escalar de FI es: 18");
-        break;       
+        break;
       case "26":
       case "27":
       case "28":
@@ -2275,11 +2295,13 @@ function calculateSumScores() {
         const punctuationFI_0_53 = document.getElementById("punctuationFI_0");
         punctuationFI_0_53.innerText = 19;
         const punctuationFI_1_53 = document.getElementById("punctuationFI_1");
-        punctuationFI_1_53.innerText = '( ' + 19 + ' )';
+        punctuationFI_1_53.innerText = 19;
         console.log("La Puntuación Escalar de FI es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de FI no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de FI no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........R E G I S T R O S..........//
@@ -2296,17 +2318,17 @@ function calculateSumScores() {
         const punctuationRG_0_0 = document.getElementById("punctuationRG_0");
         punctuationRG_0_0.innerText = 1;
         const punctuationRG_1_0 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_0.innerText = '( ' + 1 + ' )';
+        punctuationRG_1_0.innerText = 1;
         console.log("La Puntuación Escalar de RG es: 1");
         break;
       case "8":
       case "9":
       case "10":
       case "11":
-      const punctuationRG_0_1 = document.getElementById("punctuationRG_0");
+        const punctuationRG_0_1 = document.getElementById("punctuationRG_0");
         punctuationRG_0_1.innerText = 2;
         const punctuationRG_1_1 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_1.innerText = '( ' + 2 + ' )';
+        punctuationRG_1_1.innerText = 2;
         console.log("La Puntuación Escalar de RG es: 2");
         break;
       case "12":
@@ -2316,7 +2338,7 @@ function calculateSumScores() {
         const punctuationRG_0_2 = document.getElementById("punctuationRG_0");
         punctuationRG_0_2.innerText = 3;
         const punctuationRG_1_2 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_2.innerText = '( ' + 3 + ' )';
+        punctuationRG_1_2.innerText = 3;
         console.log("La Puntuación Escalar de RG es: 3");
         break;
       case "16":
@@ -2327,7 +2349,7 @@ function calculateSumScores() {
         const punctuationRG_0_3 = document.getElementById("punctuationRG_0");
         punctuationRG_0_3.innerText = 4;
         const punctuationRG_1_3 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_3.innerText = '( ' + 4 + ' )';
+        punctuationRG_1_3.innerText = 4;
         console.log("La Puntuación Escalar de RG es: 4");
         break;
       case "21":
@@ -2338,7 +2360,7 @@ function calculateSumScores() {
         const punctuationRG_0_4 = document.getElementById("punctuationRG_0");
         punctuationRG_0_4.innerText = 5;
         const punctuationRG_1_4 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_4.innerText = '( ' + 5 + ' )';
+        punctuationRG_1_4.innerText = 5;
         console.log("La Puntuación Escalar de RG es: 5");
         break;
       case "26":
@@ -2349,7 +2371,7 @@ function calculateSumScores() {
         const punctuationRG_0_5 = document.getElementById("punctuationRG_0");
         punctuationRG_0_5.innerText = 6;
         const punctuationRG_1_5 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_5.innerText = '( ' + 6 + ' )';
+        punctuationRG_1_5.innerText = 6;
         console.log("La Puntuación Escalar de RG es: 6");
         break;
       case "31":
@@ -2360,7 +2382,7 @@ function calculateSumScores() {
         const punctuationRG_0_6 = document.getElementById("punctuationRG_0");
         punctuationRG_0_6.innerText = 7;
         const punctuationRG_1_6 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_6.innerText = '( ' + 7 + ' )';
+        punctuationRG_1_6.innerText = 7;
         console.log("La Puntuación Escalar de RG es: 7");
         break;
       case "36":
@@ -2371,7 +2393,7 @@ function calculateSumScores() {
         const punctuationRG_0_8 = document.getElementById("punctuationRG_0");
         punctuationRG_0_8.innerText = 8;
         const punctuationRG_1_8 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_8.innerText = '( ' + 8 + ' )';
+        punctuationRG_1_8.innerText = 8;
         console.log("La Puntuación Escalar de RG es: 8");
         break;
       case "41":
@@ -2382,7 +2404,7 @@ function calculateSumScores() {
         const punctuationRG_0_11 = document.getElementById("punctuationRG_0");
         punctuationRG_0_11.innerText = 9;
         const punctuationRG_1_11 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_11.innerText = '( ' + 9 + ' )';
+        punctuationRG_1_11.innerText = 9;
         console.log("La Puntuación Escalar de RG es: 9");
         break;
       case "46":
@@ -2394,7 +2416,7 @@ function calculateSumScores() {
         const punctuationRG_0_13 = document.getElementById("punctuationRG_0");
         punctuationRG_0_13.innerText = 10;
         const punctuationRG_1_13 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_13.innerText = '( ' + 10 + ' )';
+        punctuationRG_1_13.innerText = 10;
         console.log("La Puntuación Escalar de RG es: 10");
         break;
       case "52":
@@ -2405,7 +2427,7 @@ function calculateSumScores() {
         const punctuationRG_0_15 = document.getElementById("punctuationRG_0");
         punctuationRG_0_15.innerText = 11;
         const punctuationRG_1_15 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_15.innerText = '( ' + 11 + ' )';
+        punctuationRG_1_15.innerText = 11;
         console.log("La Puntuación Escalar de RG es: 11");
         break;
       case "57":
@@ -2417,7 +2439,7 @@ function calculateSumScores() {
         const punctuationRG_0_17 = document.getElementById("punctuationRG_0");
         punctuationRG_0_17.innerText = 12;
         const punctuationRG_1_17 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_17.innerText = '( ' + 12 + ' )';
+        punctuationRG_1_17.innerText = 12;
         console.log("La Puntuación Escalar de RG es: 12");
         break;
       case "63":
@@ -2428,7 +2450,7 @@ function calculateSumScores() {
         const punctuationRG_0_20 = document.getElementById("punctuationRG_0");
         punctuationRG_0_20.innerText = 13;
         const punctuationRG_1_20 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_20.innerText = '( ' + 13 + ' )';
+        punctuationRG_1_20.innerText = 13;
         console.log("La Puntuación Escalar de RG es: 13");
         break;
       case "68":
@@ -2440,7 +2462,7 @@ function calculateSumScores() {
         const punctuationRG_0_24 = document.getElementById("punctuationRG_0");
         punctuationRG_0_24.innerText = 14;
         const punctuationRG_1_24 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_24.innerText = '( ' + 14 + ' )';
+        punctuationRG_1_24.innerText = 14;
         console.log("La Puntuación Escalar de RG es: 14");
         break;
       case "74":
@@ -2452,7 +2474,7 @@ function calculateSumScores() {
         const punctuationRG_0_29 = document.getElementById("punctuationRG_0");
         punctuationRG_0_29.innerText = 15;
         const punctuationRG_1_29 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_29.innerText = '( ' + 15 + ' )';
+        punctuationRG_1_29.innerText = 15;
         console.log("La Puntuación Escalar de RG es: 15");
         break;
       case "80":
@@ -2463,7 +2485,7 @@ function calculateSumScores() {
         const punctuationRG_0_34 = document.getElementById("punctuationRG_0");
         punctuationRG_0_34.innerText = 16;
         const punctuationRG_1_34 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_34.innerText = '( ' + 16 + ' )';
+        punctuationRG_1_34.innerText = 16;
         console.log("La Puntuación Escalar de RG es: 16");
         break;
       case "85":
@@ -2475,9 +2497,9 @@ function calculateSumScores() {
         const punctuationRG_0_40 = document.getElementById("punctuationRG_0");
         punctuationRG_0_40.innerText = 17;
         const punctuationRG_1_40 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_40.innerText = '( ' + 17 + ' )';
+        punctuationRG_1_40.innerText = 17;
         console.log("La Puntuación Escalar de RG es: 17");
-        break; 
+        break;
       case "91":
       case "92":
       case "93":
@@ -2486,9 +2508,9 @@ function calculateSumScores() {
         const punctuationRG_0_46 = document.getElementById("punctuationRG_0");
         punctuationRG_0_46.innerText = 18;
         const punctuationRG_1_46 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_46.innerText = '( ' + 18 + ' )';
+        punctuationRG_1_46.innerText = 18;
         console.log("La Puntuación Escalar de RG es: 18");
-        break;       
+        break;
       case "97":
       case "98":
       case "99":
@@ -2532,11 +2554,13 @@ function calculateSumScores() {
         const punctuationRG_0_53 = document.getElementById("punctuationRG_0");
         punctuationRG_0_53.innerText = 19;
         const punctuationRG_1_53 = document.getElementById("punctuationRG_1");
-        punctuationRG_1_53.innerText = '( ' + 19 + ' )';
+        punctuationRG_1_53.innerText = 19;
         console.log("La Puntuación Escalar de RG es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de RG no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de RG no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........I N F O R M A C I O N..........//
@@ -2548,128 +2572,128 @@ function calculateSumScores() {
         const punctuationIN_0_0 = document.getElementById("punctuationIN_0");
         punctuationIN_0_0.innerText = 1;
         const punctuationIN_1_0 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_0.innerText = '( ' + 1 + ' )';
+        punctuationIN_1_0.innerText = 1;
         console.log("La Puntuación Escalar de IN es: 1");
         break;
       case "3":
-      const punctuationIN_0_1 = document.getElementById("punctuationIN_0");
+        const punctuationIN_0_1 = document.getElementById("punctuationIN_0");
         punctuationIN_0_1.innerText = 2;
         const punctuationIN_1_1 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_1.innerText = '( ' + 2 + ' )';
+        punctuationIN_1_1.innerText = 2;
         console.log("La Puntuación Escalar de IN es: 2");
         break;
       case "3.5":
         const punctuationIN_0_2 = document.getElementById("punctuationIN_0");
         punctuationIN_0_2.innerText = 3;
         const punctuationIN_1_2 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_2.innerText = '( ' + 3 + ' )';
+        punctuationIN_1_2.innerText = 3;
         console.log("La Puntuación Escalar de IN es: 3");
         break;
       case "4":
         const punctuationIN_0_3 = document.getElementById("punctuationIN_0");
         punctuationIN_0_3.innerText = 4;
         const punctuationIN_1_3 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_3.innerText = '( ' + 4 + ' )';
+        punctuationIN_1_3.innerText = 4;
         console.log("La Puntuación Escalar de IN es: 4");
         break;
       case "5":
         const punctuationIN_0_4 = document.getElementById("punctuationIN_0");
         punctuationIN_0_4.innerText = 5;
         const punctuationIN_1_4 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_4.innerText = '( ' + 5 + ' )';
+        punctuationIN_1_4.innerText = 5;
         console.log("La Puntuación Escalar de IN es: 5");
         break;
       case "6":
         const punctuationIN_0_5 = document.getElementById("punctuationIN_0");
         punctuationIN_0_5.innerText = 6;
         const punctuationIN_1_5 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_5.innerText = '( ' + 6 + ' )';
+        punctuationIN_1_5.innerText = 6;
         console.log("La Puntuación Escalar de IN es: 6");
         break;
       case "7":
         const punctuationIN_0_6 = document.getElementById("punctuationIN_0");
         punctuationIN_0_6.innerText = 7;
         const punctuationIN_1_6 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_6.innerText = '( ' + 7 + ' )';
+        punctuationIN_1_6.innerText = 7;
         console.log("La Puntuación Escalar de IN es: 7");
         break;
       case "8":
         const punctuationIN_0_8 = document.getElementById("punctuationIN_0");
         punctuationIN_0_8.innerText = 8;
         const punctuationIN_1_8 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_8.innerText = '( ' + 8 + ' )';
+        punctuationIN_1_8.innerText = 8;
         console.log("La Puntuación Escalar de IN es: 8");
         break;
       case "9":
         const punctuationIN_0_11 = document.getElementById("punctuationIN_0");
         punctuationIN_0_11.innerText = 9;
         const punctuationIN_1_11 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_11.innerText = '( ' + 9 + ' )';
+        punctuationIN_1_11.innerText = 9;
         console.log("La Puntuación Escalar de IN es: 9");
         break;
       case "9.5":
         const punctuationIN_0_13 = document.getElementById("punctuationIN_0");
         punctuationIN_0_13.innerText = 10;
         const punctuationIN_1_13 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_13.innerText = '( ' + 10 + ' )';
+        punctuationIN_1_13.innerText = 10;
         console.log("La Puntuación Escalar de IN es: 10");
         break;
       case "10":
         const punctuationIN_0_15 = document.getElementById("punctuationIN_0");
         punctuationIN_0_15.innerText = 11;
         const punctuationIN_1_15 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_15.innerText = '( ' + 11 + ' )';
+        punctuationIN_1_15.innerText = 11;
         console.log("La Puntuación Escalar de IN es: 11");
         break;
       case "11":
         const punctuationIN_0_17 = document.getElementById("punctuationIN_0");
         punctuationIN_0_17.innerText = 12;
         const punctuationIN_1_17 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_17.innerText = '( ' + 12 + ' )';
+        punctuationIN_1_17.innerText = 12;
         console.log("La Puntuación Escalar de IN es: 12");
         break;
       case "12":
         const punctuationIN_0_20 = document.getElementById("punctuationIN_0");
         punctuationIN_0_20.innerText = 13;
         const punctuationIN_1_20 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_20.innerText = '( ' + 13 + ' )';
+        punctuationIN_1_20.innerText = 13;
         console.log("La Puntuación Escalar de IN es: 13");
         break;
       case "13":
         const punctuationIN_0_24 = document.getElementById("punctuationIN_0");
         punctuationIN_0_24.innerText = 14;
         const punctuationIN_1_24 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_24.innerText = '( ' + 14 + ' )';
+        punctuationIN_1_24.innerText = 14;
         console.log("La Puntuación Escalar de IN es: 14");
         break;
       case "14":
         const punctuationIN_0_29 = document.getElementById("punctuationIN_0");
         punctuationIN_0_29.innerText = 15;
         const punctuationIN_1_29 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_29.innerText = '( ' + 15 + ' )';
+        punctuationIN_1_29.innerText = 15;
         console.log("La Puntuación Escalar de IN es: 15");
         break;
       case "15":
         const punctuationIN_0_34 = document.getElementById("punctuationIN_0");
         punctuationIN_0_34.innerText = 16;
         const punctuationIN_1_34 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_34.innerText = '( ' + 16 + ' )';
+        punctuationIN_1_34.innerText = 16;
         console.log("La Puntuación Escalar de IN es: 16");
         break;
       case "16":
         const punctuationIN_0_40 = document.getElementById("punctuationIN_0");
         punctuationIN_0_40.innerText = 17;
         const punctuationIN_1_40 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_40.innerText = '( ' + 17 + ' )';
+        punctuationIN_1_40.innerText = 17;
         console.log("La Puntuación Escalar de IN es: 17");
-        break; 
+        break;
       case "17":
         const punctuationIN_0_46 = document.getElementById("punctuationIN_0");
         punctuationIN_0_46.innerText = 18;
         const punctuationIN_1_46 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_46.innerText = '( ' + 18 + ' )';
+        punctuationIN_1_46.innerText = 18;
         console.log("La Puntuación Escalar de IN es: 18");
-        break;       
+        break;
       case "18":
       case "19":
       case "20":
@@ -2689,11 +2713,13 @@ function calculateSumScores() {
         const punctuationIN_0_53 = document.getElementById("punctuationIN_0");
         punctuationIN_0_53.innerText = 19;
         const punctuationIN_1_53 = document.getElementById("punctuationIN_1");
-        punctuationIN_1_53.innerText = '( ' + 19 + ' )';
+        punctuationIN_1_53.innerText = 19;
         console.log("La Puntuación Escalar de IN es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de IN no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de IN no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
     //..........A R I T M E T I C A..........//
@@ -2703,132 +2729,132 @@ function calculateSumScores() {
         const punctuationAR_0_0 = document.getElementById("punctuationAR_0");
         punctuationAR_0_0.innerText = 1;
         const punctuationAR_1_0 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_0.innerText = '( ' + 1 + ' )';
-        console.log("La Puntuación Escalar de IN es: 1");
+        punctuationAR_1_0.innerText = 1;
+        console.log("La Puntuación Escalar de AR es: 1");
         break;
       case "1":
-      const punctuationAR_0_1 = document.getElementById("punctuationAR_0");
+        const punctuationAR_0_1 = document.getElementById("punctuationAR_0");
         punctuationAR_0_1.innerText = 2;
         const punctuationAR_1_1 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_1.innerText = '( ' + 2 + ' )';
-        console.log("La Puntuación Escalar de IN es: 2");
+        punctuationAR_1_1.innerText = 2;
+        console.log("La Puntuación Escalar de AR es: 2");
         break;
       case "2":
         const punctuationAR_0_2 = document.getElementById("punctuationAR_0");
         punctuationAR_0_2.innerText = 3;
         const punctuationAR_1_2 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_2.innerText = '( ' + 3 + ' )';
-        console.log("La Puntuación Escalar de IN es: 3");
+        punctuationAR_1_2.innerText = 3;
+        console.log("La Puntuación Escalar de AR es: 3");
         break;
       case "3":
         const punctuationAR_0_3 = document.getElementById("punctuationAR_0");
         punctuationAR_0_3.innerText = 4;
         const punctuationAR_1_3 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_3.innerText = '( ' + 4 + ' )';
-        console.log("La Puntuación Escalar de IN es: 4");
+        punctuationAR_1_3.innerText = 4;
+        console.log("La Puntuación Escalar de AR es: 4");
         break;
       case "4":
         const punctuationAR_0_4 = document.getElementById("punctuationAR_0");
         punctuationAR_0_4.innerText = 5;
         const punctuationAR_1_4 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_4.innerText = '( ' + 5 + ' )';
-        console.log("La Puntuación Escalar de IN es: 5");
+        punctuationAR_1_4.innerText = 5;
+        console.log("La Puntuación Escalar de AR es: 5");
         break;
       case "5":
         const punctuationAR_0_5 = document.getElementById("punctuationAR_0");
         punctuationAR_0_5.innerText = 6;
         const punctuationAR_1_5 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_5.innerText = '( ' + 6 + ' )';
-        console.log("La Puntuación Escalar de IN es: 6");
+        punctuationAR_1_5.innerText = 6;
+        console.log("La Puntuación Escalar de AR es: 6");
         break;
       case "6":
         const punctuationAR_0_6 = document.getElementById("punctuationAR_0");
         punctuationAR_0_6.innerText = 7;
         const punctuationAR_1_6 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_6.innerText = '( ' + 7 + ' )';
-        console.log("La Puntuación Escalar de IN es: 7");
+        punctuationAR_1_6.innerText = 7;
+        console.log("La Puntuación Escalar de AR es: 7");
         break;
       case "7":
         const punctuationAR_0_8 = document.getElementById("punctuationAR_0");
         punctuationAR_0_8.innerText = 8;
         const punctuationAR_1_8 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_8.innerText = '( ' + 8 + ' )';
-        console.log("La Puntuación Escalar de IN es: 8");
+        punctuationAR_1_8.innerText = 8;
+        console.log("La Puntuación Escalar de AR es: 8");
         break;
       case "8":
       case "9":
         const punctuationAR_0_11 = document.getElementById("punctuationAR_0");
         punctuationAR_0_11.innerText = 9;
         const punctuationAR_1_11 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_11.innerText = '( ' + 9 + ' )';
-        console.log("La Puntuación Escalar de IN es: 9");
+        punctuationAR_1_11.innerText = 9;
+        console.log("La Puntuación Escalar de AR es: 9");
         break;
       case "10":
       case "11":
         const punctuationAR_0_13 = document.getElementById("punctuationAR_0");
         punctuationAR_0_13.innerText = 10;
         const punctuationAR_1_13 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_13.innerText = '( ' + 10 + ' )';
-        console.log("La Puntuación Escalar de IN es: 10");
+        punctuationAR_1_13.innerText = 10;
+        console.log("La Puntuación Escalar de AR es: 10");
         break;
       case "12":
         const punctuationAR_0_15 = document.getElementById("punctuationAR_0");
         punctuationAR_0_15.innerText = 11;
         const punctuationAR_1_15 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_15.innerText = '( ' + 11 + ' )';
-        console.log("La Puntuación Escalar de IN es: 11");
+        punctuationAR_1_15.innerText = 11;
+        console.log("La Puntuación Escalar de AR es: 11");
         break;
       case "13":
         const punctuationAR_0_17 = document.getElementById("punctuationAR_0");
         punctuationAR_0_17.innerText = 12;
         const punctuationAR_1_17 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_17.innerText = '( ' + 12 + ' )';
-        console.log("La Puntuación Escalar de IN es: 12");
+        punctuationAR_1_17.innerText = 12;
+        console.log("La Puntuación Escalar de AR es: 12");
         break;
       case "14":
       case "15":
         const punctuationAR_0_20 = document.getElementById("punctuationAR_0");
         punctuationAR_0_20.innerText = 13;
         const punctuationAR_1_20 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_20.innerText = '( ' + 13 + ' )';
-        console.log("La Puntuación Escalar de IN es: 13");
+        punctuationAR_1_20.innerText = 13;
+        console.log("La Puntuación Escalar de AR es: 13");
         break;
       case "16":
         const punctuationAR_0_24 = document.getElementById("punctuationAR_0");
         punctuationAR_0_24.innerText = 14;
         const punctuationAR_1_24 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_24.innerText = '( ' + 14 + ' )';
-        console.log("La Puntuación Escalar de IN es: 14");
+        punctuationAR_1_24.innerText = 14;
+        console.log("La Puntuación Escalar de AR es: 14");
         break;
       case "17":
       case "18":
         const punctuationAR_0_29 = document.getElementById("punctuationAR_0");
         punctuationAR_0_29.innerText = 15;
         const punctuationAR_1_29 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_29.innerText = '( ' + 15 + ' )';
-        console.log("La Puntuación Escalar de IN es: 15");
+        punctuationAR_1_29.innerText = 15;
+        console.log("La Puntuación Escalar de AR es: 15");
         break;
       case "19":
         const punctuationAR_0_34 = document.getElementById("punctuationAR_0");
         punctuationAR_0_34.innerText = 16;
         const punctuationAR_1_34 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_34.innerText = '( ' + 16 + ' )';
-        console.log("La Puntuación Escalar de IN es: 16");
+        punctuationAR_1_34.innerText = 16;
+        console.log("La Puntuación Escalar de AR es: 16");
         break;
       case "20":
         const punctuationAR_0_40 = document.getElementById("punctuationAR_0");
         punctuationAR_0_40.innerText = 17;
         const punctuationAR_1_40 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_40.innerText = '( ' + 17 + ' )';
-        console.log("La Puntuación Escalar de IN es: 17");
-        break; 
+        punctuationAR_1_40.innerText = 17;
+        console.log("La Puntuación Escalar de AR es: 17");
+        break;
       case "21":
         const punctuationAR_0_46 = document.getElementById("punctuationAR_0");
         punctuationAR_0_46.innerText = 18;
         const punctuationAR_1_46 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_46.innerText = '( ' + 18 + ' )';
-        console.log("La Puntuación Escalar de IN es: 18");
-        break;       
+        punctuationAR_1_46.innerText = 18;
+        console.log("La Puntuación Escalar de AR es: 18");
+        break;
       case "22":
       case "23":
       case "24":
@@ -2845,12 +2871,225 @@ function calculateSumScores() {
         const punctuationAR_0_53 = document.getElementById("punctuationAR_0");
         punctuationAR_0_53.innerText = 19;
         const punctuationAR_1_53 = document.getElementById("punctuationAR_1");
-        punctuationAR_1_53.innerText = '( ' + 19 + ' )';
+        punctuationAR_1_53.innerText = 19;
         console.log("La Puntuación Escalar de AR es: 19");
-        break;               
+        break;
       default:
-        alert("La Puntuación de AR no corresponde a ninguna equivalencia, verifica lo que has colocado.");
+        alert(
+          "La Puntuación de AR no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
         break;
     }
+    //..........P A L A B R A S - E N - C O N T E X T O..........//
+    console.log("La Puntuación Natural de PC es: " + valueinputPC);
+    switch (valueinputPC) {
+      case "0":
+        const punctuationPC_0_0 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_0.innerText = 1;
+        const punctuationPC_1_0 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_0.innerText = 1;
+        console.log("La Puntuación Escalar de PC es: 1");
+        break;
+      case "1":
+        const punctuationPC_0_1 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_1.innerText = 2;
+        const punctuationPC_1_1 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_1.innerText = 2;
+        console.log("La Puntuación Escalar de PC es: 2");
+        break;
+      case "2":
+        const punctuationPC_0_2 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_2.innerText = 3;
+        const punctuationPC_1_2 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_2.innerText = 3;
+        console.log("La Puntuación Escalar de PC es: 3");
+        break;
+      case "3":
+        const punctuationPC_0_3 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_3.innerText = 4;
+        const punctuationPC_1_3 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_3.innerText = 4;
+        console.log("La Puntuación Escalar de PC es: 4");
+        break;
+      case "4":
+        const punctuationPC_0_4 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_4.innerText = 5;
+        const punctuationPC_1_4 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_4.innerText = 5;
+        console.log("La Puntuación Escalar de PC es: 5");
+        break;
+      case "5":
+        const punctuationPC_0_5 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_5.innerText = 6;
+        const punctuationPC_1_5 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_5.innerText = 6;
+        console.log("La Puntuación Escalar de PC es: 6");
+        break;
+      case "6":
+        const punctuationPC_0_6 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_6.innerText = 7;
+        const punctuationPC_1_6 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_6.innerText = 7;
+        console.log("La Puntuación Escalar de PC es: 7");
+        break;
+      case "7":
+        const punctuationPC_0_8 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_8.innerText = 8;
+        const punctuationPC_1_8 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_8.innerText = 8;
+        console.log("La Puntuación Escalar de PC es: 8");
+        break;
+      case "7.5":
+        const punctuationPC_0_11 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_11.innerText = 9;
+        const punctuationPC_1_11 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_11.innerText = 9;
+        console.log("La Puntuación Escalar de PC es: 9");
+        break;
+      case "8":
+        const punctuationPC_0_13 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_13.innerText = 10;
+        const punctuationPC_1_13 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_13.innerText = 10;
+        console.log("La Puntuación Escalar de PC es: 10");
+        break;
+      case "9":
+        const punctuationPC_0_15 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_15.innerText = 11;
+        const punctuationPC_1_15 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_15.innerText = 11;
+        console.log("La Puntuación Escalar de PC es: 11");
+        break;
+      case "10":
+        const punctuationPC_0_17 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_17.innerText = 12;
+        const punctuationPC_1_17 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_17.innerText = 12;
+        console.log("La Puntuación Escalar de PC es: 12");
+        break;
+      case "11":
+        const punctuationPC_0_20 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_20.innerText = 13;
+        const punctuationPC_1_20 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_20.innerText = 13;
+        console.log("La Puntuación Escalar de PC es: 13");
+        break;
+      case "12":
+        const punctuationPC_0_24 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_24.innerText = 14;
+        const punctuationPC_1_24 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_24.innerText = 14;
+        console.log("La Puntuación Escalar de PC es: 14");
+        break;
+      case "12.5":
+        const punctuationPC_0_29 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_29.innerText = 15;
+        const punctuationPC_1_29 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_29.innerText = 15;
+        console.log("La Puntuación Escalar de PC es: 15");
+        break;
+      case "13":
+        const punctuationPC_0_34 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_34.innerText = 16;
+        const punctuationPC_1_34 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_34.innerText = 16;
+        console.log("La Puntuación Escalar de PC es: 16");
+        break;
+      case "14":
+        const punctuationPC_0_40 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_40.innerText = 17;
+        const punctuationPC_1_40 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_40.innerText = 17;
+        console.log("La Puntuación Escalar de PC es: 17");
+        break;
+      case "15":
+        const punctuationPC_0_46 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_46.innerText = 18;
+        const punctuationPC_1_46 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_46.innerText = 18;
+        console.log("La Puntuación Escalar de PC es: 18");
+        break;
+      case "16":
+      case "17":
+      case "18":
+      case "19":
+      case "20":
+      case "21":
+      case "22":
+      case "23":
+      case "24":
+        const punctuationPC_0_53 = document.getElementById("punctuationPC_0");
+        punctuationPC_0_53.innerText = 19;
+        const punctuationPC_1_53 = document.getElementById("punctuationPC_1");
+        punctuationPC_1_53.innerText = 19;
+        console.log("La Puntuación Escalar de PC es: 19");
+        break;
+      default:
+        alert(
+          "La Puntuación de PC no corresponde a ninguna equivalencia, verifica lo que has colocado."
+        );
+        break;
+    }
+    
+    const inputDC = document.getElementById("punctuationDC_0");
+    const inputSE = document.getElementById("punctuationSE_0");
+    const inputRD = document.getElementById("punctuationRD_0");
+    const inputCD = document.getElementById("punctuationCD_0");
+    const inputCL = document.getElementById("punctuationCL_0");
+    const inputVB = document.getElementById("punctuationVB_0");
+    const inputNL = document.getElementById("punctuationNL_0");
+    const inputMT = document.getElementById("punctuationMT_0");
+    const inputCM = document.getElementById("punctuationCM_0");
+    const inputBS = document.getElementById("punctuationBS_0");
+    const inputFI = document.getElementById("punctuationFI_0");
+    const inputRG = document.getElementById("punctuationRG_0");
+    const inputIN = document.getElementById("punctuationIN_0");
+    const inputAR = document.getElementById("punctuationAR_0");
+    const inputPC = document.getElementById("punctuationPC_0");
+
+    const SumScoresICV =
+      parseInt(inputSE.innerHTML) +
+      parseInt(inputVB.innerHTML) +
+      parseInt(inputCM.innerHTML) +
+      parseInt(inputIN.innerHTML) +
+      parseInt(inputPC.innerHTML);
+    const inputSumScoresICV = document.getElementById("SumScoresICV");
+    inputSumScoresICV.innerText = SumScoresICV;
+
+    const SumScoresIRP =
+      parseInt(inputDC.innerHTML) +
+      parseInt(inputCD.innerHTML) +
+      parseInt(inputMT.innerHTML) +
+      parseInt(inputFI.innerHTML);
+    const inputSumScoresIRP = document.getElementById("SumScoresIRP");
+    inputSumScoresIRP.innerText = SumScoresIRP;
+
+    const SumScoresIMT =
+      parseInt(inputRD.innerHTML) +
+      parseInt(inputNL.innerHTML) +
+      parseInt(inputAR.innerHTML);    
+    const inputSumScoresIMT = document.getElementById("SumScoresIMT");
+    inputSumScoresIMT.innerText = SumScoresIMT;
+
+    const SumScoresIVP =
+      parseInt(inputCL.innerHTML) +
+      parseInt(inputBS.innerHTML) +
+      parseInt(inputRG.innerHTML);    
+    const inputSumScoresIVP = document.getElementById("SumScoresIVP");
+    inputSumScoresIVP.innerText = SumScoresIVP;
+
+    const SumScoresCIT =
+      parseInt(inputDC.innerHTML) +
+      parseInt(inputSE.innerHTML) +
+      parseInt(inputRD.innerHTML) +
+      parseInt(inputCD.innerHTML) +
+      parseInt(inputCL.innerHTML) +
+      parseInt(inputVB.innerHTML) +
+      parseInt(inputNL.innerHTML) +
+      parseInt(inputMT.innerHTML) +
+      parseInt(inputCM.innerHTML) +
+      parseInt(inputBS.innerHTML);    
+    const inputSumScoresCIT = document.getElementById("SumScoresCIT");
+    inputSumScoresCIT.innerText = SumScoresCIT;
   }
 }
