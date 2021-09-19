@@ -34,7 +34,7 @@ block contenidos
             input.input-table(type="number" placeholder="Ex: 23" name="dayBirthday" required id="dayBirthday")
 
             label.label-table.border-bottom-left.button(for="dateAge" type="button" onclick="calculateYear()") Edad a la evaluación
-            label.input-table.input-result(for="" id="resultYear")
+            label.input-table.input-result(for="resultYear" id="resultYear")
             label.input-table.input-result(for="" id="resultMonth")
             label.input-table.border-bottom-rigth.input-result(for="" id="resultDay")
 
@@ -48,13 +48,13 @@ block contenidos
             label.grid-border.grid-6to12.border-top-rigth(for="") Puntuaciones escalares 
           .grid
             label.grid-border.grid-1to5.font-09(for="DC") Diseño con cubos
-            input.grid-border.grid-5to6(type="number" name="inputDC" required) 
-            label.grid-border.grid-6to7(for="")
+            input.grid-border.grid-5to6(type="number" name="inputDC" required id="inputDC") 
+            label.grid-border.grid-6to7#punctuationDC_0(for="")
             label.grid-border.grid-7to8.background-pri(for="")
-            label.grid-border.grid-8to9(for="")
+            label.grid-border.grid-8to9#punctuationDC_1(for="")
             label.grid-border.grid-9to10.background-pri(for="")
             label.grid-border.grid-10to11.background-pri(for="")
-            label.grid-border.grid-11to12(for="")
+            label.grid-border.grid-11to12#punctuationDC_2(for="")
           .grid
             label.grid-border.grid-1to5.font-09(for="SE") Semejanzas
             input.grid-border.grid-5to6(type="number" name="inputSE" required) 

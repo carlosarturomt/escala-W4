@@ -94,28 +94,25 @@ function calculateYear() {
   if (ageMonth < 0) {
     const newAgeYear = ageYear - 1;
     const newAgeMonth = 12 + ageMonth;
-    console.log("Se cumple condición para los que aún no cumplen año.");
-
+    // console.log("Se cumple condición para los que aún no cumplen años.");
     const resultYear = document.getElementById("resultYear");
     resultYear.innerText = newAgeYear;
     const resultMonth = document.getElementById("resultMonth");
     resultMonth.innerText = newAgeMonth;
   } else {
-    console.log("Cumplió años este año.");
+    // console.log("Cumplió años este año.");
   }
   if (ageDay > 31) {
     const newAgeDay = 31 + parseInt(valueBirthdayDay) - parseInt(valueTodayDay);
-
-    console.log("Se cumple condición para día de nacido.");
-
     const resultDay = document.getElementById("resultDay");
     resultDay.innerText = newAgeDay;
+    // console.log("Se cumple condición para día de nacido.");
   } 
   if (valueTodayDay >= valueBirthdayDay) {
     const ageDay = parseInt(valueTodayDay) - parseInt(valueBirthdayDay);
     const resultDay = document.getElementById("resultDay");
     resultDay.innerText = ageDay;  
-    console.log('Hoy o bien hace unos días ha cumplido otro mes.')
+    // console.log('Hoy o bien hace unos días ha cumplido otro mes.')
   }
   if ((valueTodayMonth == valueBirthdayMonth)&&(valueTodayDay < valueBirthdayDay)){
     const ageYearAlter = ageYear - 1;
@@ -127,7 +124,8 @@ function calculateYear() {
     resultMonth.innerText = newAgeMonth;
     const resultDay = document.getElementById("resultDay");
     resultDay.innerText = ageDay;  
-    console.log('Este mes cumple años.')
+    // console.log('Este mes cumple años.')
   }
+  return [ageYear,ageMonth];
 }
 console.groupEnd();

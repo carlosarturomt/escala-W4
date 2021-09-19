@@ -67,7 +67,7 @@
                 <input class="input-table" type="number" placeholder="Ex: 03" name="monthBirthday" required="required" id="monthBirthday"/>
                 <input class="input-table" type="number" placeholder="Ex: 23" name="dayBirthday" required="required" id="dayBirthday"/>
                 <label class="label-table border-bottom-left button" for="dateAge" type="button" onclick="calculateYear()">Edad a la evaluación</label>
-                <label class="input-table input-result" for="" id="resultYear"></label>
+                <label class="input-table input-result" for="resultYear" id="resultYear"></label>
                 <label class="input-table input-result" for="" id="resultMonth"></label>
                 <label class="input-table border-bottom-rigth input-result" for="" id="resultDay"></label>
               </div>
@@ -85,13 +85,13 @@
               </div>
               <div class="grid">
                 <label class="grid-border grid-1to5 font-09" for="DC">Diseño con cubos</label>
-                <input class="grid-border grid-5to6" type="number" name="inputDC" required="required"/>
-                <label class="grid-border grid-6to7" for=""></label>
+                <input class="grid-border grid-5to6" type="number" name="inputDC" required="required" id="inputDC"/>
+                <label class="grid-border grid-6to7" id="punctuationDC_0" for=""></label>
                 <label class="grid-border grid-7to8 background-pri" for=""></label>
-                <label class="grid-border grid-8to9" for=""></label>
+                <label class="grid-border grid-8to9" id="punctuationDC_1" for=""></label>
                 <label class="grid-border grid-9to10 background-pri" for=""></label>
                 <label class="grid-border grid-10to11 background-pri" for=""></label>
-                <label class="grid-border grid-11to12" for=""></label>
+                <label class="grid-border grid-11to12" id="punctuationDC_2" for=""></label>
               </div>
               <div class="grid">
                 <label class="grid-border grid-1to5 font-09" for="SE">Semejanzas</label>
@@ -1193,5 +1193,5 @@
   </body>
   <script src="https://kit.fontawesome.com/2c36e9b7b1.js" rossorigin="anonymous"></script>
   <script src="../js/age.js"></script>
-  <script src="../js/tableAge7-8.js"></script>
+  <script src="../js/tableAge6-7.js"></script>
 </html>

@@ -87,8 +87,7 @@ function calculateYear() {
 
   if (ageMonth < 0) {
     var newAgeYear = ageYear - 1;
-    var newAgeMonth = 12 + ageMonth;
-    console.log("Se cumple condición para los que aún no cumplen año.");
+    var newAgeMonth = 12 + ageMonth; // console.log("Se cumple condición para los que aún no cumplen años.");
 
     var _resultYear = document.getElementById("resultYear");
 
@@ -97,17 +96,15 @@ function calculateYear() {
     var _resultMonth = document.getElementById("resultMonth");
 
     _resultMonth.innerText = newAgeMonth;
-  } else {
-    console.log("Cumplió años este año.");
+  } else {// console.log("Cumplió años este año.");
   }
 
   if (ageDay > 31) {
     var newAgeDay = 31 + parseInt(valueBirthdayDay) - parseInt(valueTodayDay);
-    console.log("Se cumple condición para día de nacido.");
 
     var _resultDay = document.getElementById("resultDay");
 
-    _resultDay.innerText = newAgeDay;
+    _resultDay.innerText = newAgeDay; // console.log("Se cumple condición para día de nacido.");
   }
 
   if (valueTodayDay >= valueBirthdayDay) {
@@ -115,8 +112,7 @@ function calculateYear() {
 
     var _resultDay2 = document.getElementById("resultDay");
 
-    _resultDay2.innerText = _ageDay;
-    console.log('Hoy o bien hace unos días ha cumplido otro mes.');
+    _resultDay2.innerText = _ageDay; // console.log('Hoy o bien hace unos días ha cumplido otro mes.')
   }
 
   if (valueTodayMonth == valueBirthdayMonth && valueTodayDay < valueBirthdayDay) {
@@ -135,9 +131,10 @@ function calculateYear() {
 
     var _resultDay3 = document.getElementById("resultDay");
 
-    _resultDay3.innerText = _ageDay2;
-    console.log('Este mes cumple años.');
+    _resultDay3.innerText = _ageDay2; // console.log('Este mes cumple años.')
   }
+
+  return [ageYear, ageMonth];
 }
 
 console.groupEnd();
