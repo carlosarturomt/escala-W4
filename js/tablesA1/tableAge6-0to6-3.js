@@ -3017,6 +3017,22 @@ function calculateSumScores() {
         break;
     }
 
+    let inputSE3 = document.getElementById("punctuationSE_0");
+    let inputVB3 = document.getElementById("punctuationVB_0");
+    let inputCM3 = document.getElementById("punctuationCM_0");
+    var SumScoresICV3 =
+    parseInt(inputSE3.innerHTML) +
+    parseInt(inputVB3.innerHTML) +
+    parseInt(inputCM3.innerHTML);  
+
+    let inputDC3 = document.getElementById("punctuationDC_0");
+    let inputCD3 = document.getElementById("punctuationCD_0");
+    let inputMT3 = document.getElementById("punctuationMT_0");
+    var SumScoresIRP3 =
+      parseInt(inputDC3.innerHTML) +
+      parseInt(inputCD3.innerHTML) +
+      parseInt(inputMT3.innerHTML);
+
     if ((inputIN.value == "")&&(inputPC.value == "")) {
       let inputSE = document.getElementById("punctuationSE_0");
       let inputVB = document.getElementById("punctuationVB_0");
@@ -3117,7 +3133,7 @@ function calculateSumScores() {
     let inputMT = document.getElementById("punctuationMT_0");
     let inputCM = document.getElementById("punctuationCM_0");
     let inputBS = document.getElementById("punctuationBS_0");
-    let SumScoresCIT =
+    var SumScoresCIT =
       parseInt(inputDC.innerHTML) +
       parseInt(inputSE.innerHTML) +
       parseInt(inputRD.innerHTML) +
@@ -3131,4 +3147,26 @@ function calculateSumScores() {
     let inputSumScoresCIT = document.getElementById("SumScoresCIT");
     inputSumScoresCIT.innerText = SumScoresCIT;
   }
+  // ........................- 10 - C I T -........................ 
+  const inputSumScoresCIT10 = document.getElementById("SumScoresCIT10");
+  inputSumScoresCIT10.innerText = SumScoresCIT;
+
+  const SumScoresCIT10_averageScore = parseInt(SumScoresCIT) / 10; 
+  const inputSumScoresCIT10_averageScore = document.getElementById("SumScoresCIT10_averageScore");
+  inputSumScoresCIT10_averageScore.innerText = SumScoresCIT10_averageScore;
+
+  // ........................- 3 - C V -........................ 
+  const inputSumScoresICV3 = document.getElementById("SumScoresICV3");
+  inputSumScoresICV3.innerText = SumScoresICV3;
+
+  const SumScoresICV3_averageScore = parseInt(SumScoresICV3) / 3; 
+  const inputSumScoresICV3_averageScore = document.getElementById("SumScoresICV3_averageScore");
+  inputSumScoresICV3_averageScore.innerText = SumScoresICV3_averageScore.toFixed(2);
+  // ........................- 3 - R P -........................ 
+  const inputSumScoresIRP3 = document.getElementById("SumScoresIRP3");
+  inputSumScoresIRP3.innerText = SumScoresIRP3;
+
+  const SumScoresIRP3_averageScore = parseInt(SumScoresIRP3) / 3; 
+  const inputSumScoresIRP3_averageScore = document.getElementById("SumScoresIRP3_averageScore");
+  inputSumScoresIRP3_averageScore.innerText = SumScoresIRP3_averageScore.toFixed(2);
 }
